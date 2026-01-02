@@ -16,6 +16,8 @@ import {
   Code2,
   Globe
 } from "lucide-react";
+import HomePageCards from "@/src/component/HomePageCards";
+import HomePageEventCards from "../component/HomePageEventCards";
 
 export default function HomePage() {
   const [fade, setFade] = useState(false);
@@ -56,11 +58,21 @@ export default function HomePage() {
     }
   ];
 
+  const prevIndexRef = useRef<number | null>(null);
+
   useEffect(() => {
-    const randomIndex = Math.floor(Math.random() * heroTitleMessages.length);
+    let randomIndex;
+
+    do {
+      randomIndex = Math.floor(Math.random() * heroTitleMessages.length);
+    } while (randomIndex === prevIndexRef.current);
+
+    prevIndexRef.current = randomIndex;
+
     setCurTitle(heroTitleMessages[randomIndex].heroTitle);
     setSubCurTitle(heroTitleMessages[randomIndex].heroSubTitle);
   }, []);
+
 
   useEffect(() => {
     const timeout = setTimeout(() => setFade(true), 50);
@@ -150,36 +162,55 @@ export default function HomePage() {
             </div>
 
             <div className="flagship-cards">
-              <div className="mini-card">
-                <div className="icon-box">
-                  <Zap size={24} />
-                </div>
-                <div className="card-info">
-                  <h4>BitBox</h4>
-                  <span>Flagship Hackathon</span>
-                </div>
-              </div>
+              <HomePageCards
+                heading="BitBox"
+                icon={Zap}
+                description="Flagship Hackathon"
+              />
 
-              <div className="mini-card">
-                <div className="icon-box">
-                  <Sparkles size={24} />
-                </div>
-                <div className="card-info">
-                  <h4>ExploreML</h4>
-                  <span>AI/ML Deep Dive</span>
-                </div>
-              </div>
+              <HomePageCards
+                heading="ExploreML"
+                icon={Sparkles}
+                description="AI/ML Deep Dive"
+              />
 
-              <div className="mini-card">
-                <div className="icon-box">
-                  <Globe size={24} />
-                </div>
-                <div className="card-info">
-                  <h4>Workshops & Meetups</h4>
-                  <span>Weekly Tech Sessions</span>
-                </div>
-              </div>
+              <HomePageCards
+                heading="Workshops & Meetups"
+                icon={Globe}
+                description="Weekly Tech Sessions"
+              />
             </div>
+          </div>
+        </section>
+        <section className={`events-section fade-up ${fade ? "visible" : ""}`}>
+          <span className="section-label">Our Programs</span>
+          <h2 className="hero-title" style={{ fontSize: "3rem" }}>Events</h2>
+
+          <div className="events-grid">
+            <HomePageEventCards
+              heading="Hackathons"
+              description="The idea of conducting hackathons is to make students code collaboratively from scratch to end with a working prototype."
+              variant="hackathons"
+            />
+
+            <HomePageEventCards
+              heading="Sessions"
+              description="Small sessions for the students to showcase their projects, achievements and for getting to know about the current trends."
+              variant="sessions"
+            />
+
+            <HomePageEventCards
+              heading="Study Jams"
+              description="Study Jams are community-run groups for Developers. Whether you are a beginner or an experienced developer, you get to learn new things."
+              variant="study-jams"
+            />
+
+            <HomePageEventCards
+              heading="Meetups"
+              description="Regular meetings are organised for the students who share the same technical interests, so they can get connected with each other."
+              variant="meetups"
+            />
+
           </div>
         </section>
       </div>
