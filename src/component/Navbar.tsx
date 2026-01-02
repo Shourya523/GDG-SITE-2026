@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
 
         <ul className="navbar-links">
           <li><a href="#events">Events</a></li>
-          <li><a href="#teams">Teams</a></li>
+          <li><a href="teams">Team</a></li>
           <li><a href="#bitbox">BitBox</a></li>
           <li><a href="#studyjam">StudyJam</a></li>
         </ul>

@@ -1,0 +1,228 @@
+/* --- team.css --- */
+
+/* Inherit font from your layout/globals, or explicit: */
+.team-container {
+  font-family: 'Albert Sans', 'Google Sans', sans-serif;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* --- The Main Active Card --- */
+.active-profile-card {
+  /* Dark Grey Background matching image */
+  background: #1a1a1a; 
+  border-radius: 20px;
+  padding: 3rem 4rem;
+  width: 100%;
+  max-width: 900px;
+  min-height: 380px;
+  
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  
+  /* Subtle border/shadow */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  
+  margin-bottom: 5rem; /* Space between card and carousel */
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* --- Gradient Profile Image --- */
+.profile-image-container {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  flex-shrink: 0;
+}
+
+/* The Google Colors Gradient Ring */
+.gradient-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4285F4, #EA4335, #FBBC04, #34A853);
+  z-index: 1;
+}
+
+.profile-image-wrapper {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 2;
+  border: 4px solid #1a1a1a; /* Creates gap between image and gradient */
+  background: #1a1a1a;
+}
+
+.profile-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.profile-image-wrapper img:hover {
+  transform: scale(1.1);
+}
+
+/* --- Typography --- */
+.profile-info {
+  flex: 1;
+  text-align: left;
+}
+
+.profile-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+
+.highlight-name {
+  background: linear-gradient(to right, #EA4335, #FBBC04, #34A853, #4285F4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.profile-quote {
+  font-size: 1rem;
+  color: #a1a1a1; /* Muted text */
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: transform 0.2s;
+}
+
+.social-item:hover {
+  transform: translateY(-2px);
+  color: #FBBC04; /* Yellow accent on hover */
+}
+
+/* --- Navigation Tabs --- */
+.category-nav {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  width: 100%;
+  max-width: 900px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.nav-item {
+  background: none;
+  border: none;
+  color: #717171;
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding-bottom: 0.5rem;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-item:hover {
+  color: #d1d1d1;
+}
+
+.nav-item.active {
+  color: #fff;
+}
+
+.nav-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1.5rem; /* Matches border-bottom of container */
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px 2px 0 0;
+}
+
+/* --- Circular Carousel --- */
+.carousel-container {
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+}
+
+.carousel-avatar-btn {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  filter: grayscale(100%);
+  opacity: 0.6;
+}
+
+.carousel-avatar-btn.selected,
+.carousel-avatar-btn:hover {
+  transform: scale(1.15);
+  border-color: #fff;
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.carousel-avatar-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .active-profile-card {
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .profile-info {
+    text-align: center;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  .category-nav {
+    gap: 1.5rem;
+    font-size: 1rem;
+  }
+}
