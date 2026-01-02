@@ -17,6 +17,7 @@ import {
   Globe
 } from "lucide-react";
 import Navbar from "@/src/component/Navbar";
+import Footer from "@/src/component/Footer";
 
 export default function HomePage() {
   const [fade, setFade] = useState(false);
@@ -87,6 +88,7 @@ export default function HomePage() {
         </div>
       </section>
     </div>
+    <Footer />
     </section>
   );
 }

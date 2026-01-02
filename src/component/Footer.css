@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+.footer-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Albert Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-color);
+  border-top: 1px solid var(--border); /* Seamless separation from content */
+  position: relative;
+  z-index: 10;
+}
+
+/* --- CTA Section (Dark Glass Card) --- */
+.footer-cta {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  margin: 60px auto 0;
+  
+  /* Dark Glassy Look matching the theme */
+  background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  
+  padding: 60px 20px;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Subtle shadow to lift it off the grid */
+  box-shadow: 0 4px 40px rgba(0,0,0,0.5);
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.footer-cta h2 {
+  color: var(--text-primary);
+  font-size: 2rem; /* approx 32px */
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.footer-cta p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.cta-button {
+  background: var(--text-primary); /* White button */
+  color: black; /* Black text */
+  border: none;
+  padding: 14px 36px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+/* --- Ambient Glows inside CTA --- */
+.cta-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.1; /* Very subtle, just a tint */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.glow-blue {
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  left: -50px;
+  background: var(--brand-blue);
+}
+
+.glow-red {
+  width: 250px;
+  height: 250px;
+  bottom: -80px;
+  right: -50px;
+  background: var(--brand-red);
+}
+
+/* --- Main Footer Content --- */
+.footer-main {
+  background-color: transparent;
+  padding: 80px 0 20px;
+  color: var(--text-secondary);
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  gap: 40px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 150px;
+}
+
+.brand-column {
+  flex: 2;
+  min-width: 280px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+/* Google Dots using Brand Vars */
+.g-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.g-dot.blue { background-color: var(--brand-blue); }
+.g-dot.red { background-color: var(--brand-red); }
+.g-dot.yellow { background-color: var(--brand-yellow); }
+.g-dot.green { background-color: var(--brand-green); }
+
+.brand-name {
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-left: 8px;
+}
+
+.brand-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 380px;
+  color: var(--text-secondary);
+}
+
+.footer-column h3 {
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 14px;
+}
+
+.footer-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--brand-blue);
+  text-decoration: none;
+}
+
+.footer-copyright {
+  border-top: 1px solid var(--border);
+  margin-top: 80px;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.footer-copyright p {
+  font-size: 0.875rem;
+  color: #525252; /* Slightly darker than secondary for footer note */
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .brand-column {
+    margin-bottom: 20px;
+  }
+  
+  .footer-cta {
+    width: 95%;
+    padding: 40px 20px;
+  }
+  
+  .footer-cta h2 {
+    font-size: 1.75rem;
+  }
+}
