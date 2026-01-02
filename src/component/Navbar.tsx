@@ -10,10 +10,10 @@ const Navbar: React.FC = () => {
         </div>
 
         <ul className="navbar-links">
-          <li><a href="#resources">Resources & Blogs</a></li>
-          <li><a href="#projects">Projects</a></li>
           <li><a href="#events">Events</a></li>
-          <li><a href="#forum">Forum</a></li>
+          <li><a href="#teams">Teams</a></li>
+          <li><a href="#bitbox">BitBox</a></li>
+          <li><a href="#studyjam">StudyJam</a></li>
         </ul>
       </nav>
     </div>
