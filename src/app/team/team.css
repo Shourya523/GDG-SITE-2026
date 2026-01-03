@@ -1,6 +1,3 @@
-/* --- team.css --- */
-
-/* Inherit font from your layout/globals, or explicit: */
 .team-container {
   font-family: 'Albert Sans', 'Google Sans', sans-serif;
   width: 100%;
@@ -13,25 +10,19 @@
   min-height: 100vh;
 }
 
-/* --- The Main Active Card --- */
 .active-profile-card {
-  /* Dark Grey Background matching image */
   background: #1a1a1a; 
   border-radius: 20px;
   padding: 3rem 4rem;
   width: 100%;
   max-width: 900px;
   min-height: 380px;
-  
   display: flex;
   align-items: center;
   gap: 4rem;
-  
-  /* Subtle border/shadow */
   border: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   opacity: 0;
   animation: fadeIn 0.5s ease forwards;
 }
@@ -39,6 +30,7 @@
 @keyframes fadeIn {
   to { opacity: 1; }
 }
+
 .profile-image-container {
   position: relative;
   width: 250px;
@@ -123,6 +115,7 @@
   transform: translateY(-2px);
   color: #FBBC04;
 }
+
 .category-nav {
   display: flex;
   justify-content: center;
@@ -157,7 +150,7 @@
 .nav-item.active::after {
   content: '';
   position: absolute;
-  bottom: -1.5rem;
+  bottom: -1.1rem;
   left: 0;
   width: 100%;
   height: 3px;
@@ -166,9 +159,11 @@
 }
 
 .carousel-container {
+  margin-top: 1rem;
   width: 100%;
   max-width: 800px;
   position: relative;
+  padding: 0 3rem; 
 }
 
 .carousel-avatar-btn {
@@ -181,6 +176,8 @@
   transition: all 0.3s ease;
   filter: grayscale(100%);
   opacity: 0.6;
+  position: relative;
+  box-sizing: border-box; 
 }
 
 .carousel-avatar-btn.selected,
@@ -189,13 +186,25 @@
   border-color: #fff;
   filter: grayscale(0%);
   opacity: 1;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
 .carousel-avatar-btn img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block; 
 }
+
+/* FIX: Target the inner Shadcn carousel viewport to prevent cutting off */
+.team-carousel .overflow-hidden {
+  padding-top: 1.5rem;    /* Creates safe space on top inside the clip area */
+  padding-bottom: 1.5rem; /* Creates safe space on bottom inside the clip area */
+  margin-top: -1.5rem;    /* Pulls it back up so layout doesn't shift */
+  margin-bottom: -1.5rem; /* Pulls it back down */
+}
+
 @media (max-width: 768px) {
   .active-profile-card {
     flex-direction: column;
@@ -215,5 +224,10 @@
   .category-nav {
     gap: 1.5rem;
     font-size: 1rem;
+  }
+  
+  .carousel-avatar-btn {
+    width: 60px;
+    height: 60px;
   }
 }

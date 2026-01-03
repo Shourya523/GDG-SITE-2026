@@ -27,56 +27,171 @@ interface TeamMember {
   };
 }
 
-// Dummy Data
+// Helper to generate consistent mock images
+const getAvatar = (seed: string) => `https://api.dicebear.com/7.x/avataaars/svg?seed=${seed}&backgroundColor=b6e3f4,c0aede,d1d4f9`;
+
 const teamData: TeamMember[] = [
+  // --- MENTORS (10 Items) ---
   {
-    id: 1,
-    name: "Jinendra Jain",
-    role: "GDG Organizer",
-    category: "Team Leads",
-    image: "https://github.com/shadcn.png", 
-    quote: "Code is like humor. If you have to explain it, it's bad.",
-    socials: {
-      instagram: "hattori.03",
-      linkedin: "jinendra-jain",
-      github: "jjinendra3",
-      discord: "jim_k_schrute"
-    }
-  },
-  {
-    id: 2,
-    name: "Aditya Singh",
-    role: "Tech Lead",
-    category: "Team Leads",
-    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Aditya",
-    quote: "Talk is cheap. Show me the code.",
-    socials: { linkedin: "aditya-singh", github: "aditya" }
-  },
-  {
-    id: 3,
-    name: "Dr. Anubha",
-    role: "Faculty Advisor",
-    category: "Mentors",
-    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Anubha",
-    quote: "Empowering students to build the future.",
+    id: 1, name: "Dr. Anubha", role: "Faculty Advisor", category: "Mentors",
+    image: getAvatar("Anubha"), quote: "Empowering students to build the future.",
     socials: { linkedin: "anubha-prof" }
   },
   {
-    id: 4,
-    name: "Rohan Gupta",
-    role: "Management Lead",
-    category: "Core Team",
-    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Rohan",
-    quote: "Management is doing things right; leadership is doing the right things.",
+    id: 2, name: "Prof. Sharma", role: "Technical Mentor", category: "Mentors",
+    image: getAvatar("Sharma"), quote: "Innovation starts with a single step.",
+    socials: { linkedin: "sharma-tech", github: "sharma-code" }
+  },
+  {
+    id: 3, name: "Dr. R.K. Gupta", role: "Dean of Student Affairs", category: "Mentors",
+    image: getAvatar("Gupta"), quote: "Leadership is service, not position.",
+    socials: { linkedin: "rk-gupta" }
+  },
+  {
+    id: 4, name: "Ms. Priya Das", role: "Alumni Mentor", category: "Mentors",
+    image: getAvatar("Priya"), quote: "Your network is your net worth.",
+    socials: { linkedin: "priya-d", instagram: "priya_life" }
+  },
+  {
+    id: 5, name: "Mr. Amit Verma", role: "Industry Expert", category: "Mentors",
+    image: getAvatar("Amit"), quote: "Build things that matter.",
+    socials: { linkedin: "amit-verma-ind" }
+  },
+  {
+    id: 6, name: "Dr. S. Singh", role: "Research Guide", category: "Mentors",
+    image: getAvatar("Singh"), quote: "Question everything, learn something.",
+    socials: { linkedin: "s-singh", github: "research-singh" }
+  },
+  {
+    id: 7, name: "Mrs. Kavita R", role: "Soft Skills Mentor", category: "Mentors",
+    image: getAvatar("Kavita"), quote: "Communication bridges the gap.",
+    socials: { instagram: "kavita_speaks", linkedin: "kavita-r" }
+  },
+  {
+    id: 8, name: "Mr. John Doe", role: "Cloud Architect", category: "Mentors",
+    image: getAvatar("John"), quote: "The sky is not the limit, the cloud is.",
+    socials: { github: "johndoe", linkedin: "john-cloud" }
+  },
+  {
+    id: 9, name: "Dr. Emily W", role: "Data Science Lead", category: "Mentors",
+    image: getAvatar("Emily"), quote: "Data tells a story if you listen.",
+    socials: { linkedin: "emily-ds", github: "emily-data" }
+  },
+  {
+    id: 10, name: "Prof. Alan T", role: "Cybersecurity Expert", category: "Mentors",
+    image: getAvatar("Alan"), quote: "Security is not a product, it's a process.",
+    socials: { github: "alan-sec", linkedin: "alan-cyber" }
+  },
+
+  // --- TEAM LEADS (10 Items) ---
+  {
+    id: 11, name: "Jinendra Jain", role: "GDG Organizer", category: "Team Leads",
+    image: "https://github.com/shadcn.png", quote: "Code is like humor. If you have to explain it, it's bad.",
+    socials: { instagram: "hattori.03", linkedin: "jinendra-jain", github: "jjinendra3", discord: "jim_k_schrute" }
+  },
+  {
+    id: 12, name: "Aditya Singh", role: "Tech Lead", category: "Team Leads",
+    image: getAvatar("Aditya"), quote: "Talk is cheap. Show me the code.",
+    socials: { linkedin: "aditya-singh", github: "aditya" }
+  },
+  {
+    id: 13, name: "Sarah Connor", role: "Event Lead", category: "Team Leads",
+    image: getAvatar("Sarah"), quote: "The future is what we make it.",
+    socials: { instagram: "sarah_c", linkedin: "sarah-events" }
+  },
+  {
+    id: 14, name: "Michael Scott", role: "Community Lead", category: "Team Leads",
+    image: getAvatar("Michael"), quote: "I want people to be afraid of how much they love me.",
+    socials: { linkedin: "michael-scott-paper", instagram: "greatest_boss" }
+  },
+  {
+    id: 15, name: "Pam Beesly", role: "Design Lead", category: "Team Leads",
+    image: getAvatar("Pam"), quote: "There’s a lot of beauty in ordinary things.",
+    socials: { instagram: "pam_art", linkedin: "pam-beesly" }
+  },
+  {
+    id: 16, name: "Jim Halpert", role: "Outreach Lead", category: "Team Leads",
+    image: getAvatar("Jim"), quote: "Bears. Beets. Battlestar Galactica.",
+    socials: { linkedin: "jim-sales", discord: "big_tuna" }
+  },
+  {
+    id: 17, name: "Dwight Schrute", role: "Logistics Lead", category: "Team Leads",
+    image: getAvatar("Dwight"), quote: "False. I am the best lead.",
+    socials: { discord: "dwight_shrute", linkedin: "assistant-regional-mgr" }
+  },
+  {
+    id: 18, name: "Ryan Howard", role: "Innovation Lead", category: "Team Leads",
+    image: getAvatar("Ryan"), quote: "I’m the wonder kid.",
+    socials: { github: "ryan_temp", linkedin: "wuphf-founder" }
+  },
+  {
+    id: 19, name: "Kelly Kapoor", role: "Social Media Lead", category: "Team Leads",
+    image: getAvatar("Kelly"), quote: "Who says exactly what they’re thinking?",
+    socials: { instagram: "kelly_biz", linkedin: "kelly-customer-svc" }
+  },
+  {
+    id: 20, name: "Angela Martin", role: "Finance Lead", category: "Team Leads",
+    image: getAvatar("Angela"), quote: "I don't suffer fools correctly.",
+    socials: { linkedin: "angela-acct" }
+  },
+
+  // --- CORE TEAM (10 Items) ---
+  {
+    id: 21, name: "Rohan Gupta", role: "Management Lead", category: "Core Team",
+    image: getAvatar("Rohan"), quote: "Management is doing things right.",
     socials: { instagram: "rohan_g", linkedin: "rohan-gupta" }
   },
+  {
+    id: 22, name: "Isha Patel", role: "Web Developer", category: "Core Team",
+    image: getAvatar("Isha"), quote: "Eat. Sleep. Code. Repeat.",
+    socials: { github: "isha_dev", linkedin: "isha-web" }
+  },
+  {
+    id: 23, name: "Rahul Kumar", role: "Content Writer", category: "Core Team",
+    image: getAvatar("Rahul"), quote: "Words have power.",
+    socials: { linkedin: "rahul-writes", instagram: "rahul_poet" }
+  },
+  {
+    id: 24, name: "Sneha Reddy", role: "Graphic Designer", category: "Core Team",
+    image: getAvatar("Sneha"), quote: "Design is intelligence made visible.",
+    socials: { instagram: "sneha_designs", linkedin: "sneha-ux" }
+  },
+  {
+    id: 25, name: "Vikram Malhotra", role: "Video Editor", category: "Core Team",
+    image: getAvatar("Vikram"), quote: "Fix it in post.",
+    socials: { instagram: "vikram_edits", linkedin: "vikram-vfx" }
+  },
+  {
+    id: 26, name: "Pooja Hegde", role: "PR Coordinator", category: "Core Team",
+    image: getAvatar("Pooja"), quote: "Building relationships matters.",
+    socials: { linkedin: "pooja-pr", instagram: "pooja_connects" }
+  },
+  {
+    id: 27, name: "Arjun Rampal", role: "Logistics Member", category: "Core Team",
+    image: getAvatar("Arjun"), quote: "Execution is everything.",
+    socials: { discord: "arjun_logs", linkedin: "arjun-ops" }
+  },
+  {
+    id: 28, name: "Nisha Singh", role: "App Developer", category: "Core Team",
+    image: getAvatar("Nisha"), quote: "There's an app for that.",
+    socials: { github: "nisha_app", linkedin: "nisha-dev" }
+  },
+  {
+    id: 29, name: "Kabir Khan", role: "Sponsorship Member", category: "Core Team",
+    image: getAvatar("Kabir"), quote: "Show me the money.",
+    socials: { linkedin: "kabir-corp", instagram: "kabir_biz" }
+  },
+  {
+    id: 30, name: "Zara Ali", role: "Volunteer", category: "Core Team",
+    image: getAvatar("Zara"), quote: "Service to others is the rent you pay.",
+    socials: { instagram: "zara_v", linkedin: "zara-vol" }
+  }
 ];
 
 export default function Team() {
   const [activeCategory, setActiveCategory] = useState<Category>("Team Leads");
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
 
-  // Filter Data
   const filteredMembers = teamData.filter(m => m.category === activeCategory);
 
   useEffect(() => {
@@ -88,7 +203,8 @@ export default function Team() {
   }, [activeCategory]);
 
   return (
-    <div className="team-container fade-up visible">
+    // REMOVED 'fade-up visible' to ensure visibility
+    <div className="team-container">
       <div className="text-center mb-8">
         <h1 style={{ fontSize: '1.5rem', color: '#fff', fontWeight: 600 }}></h1>
         <p style={{ color: '#a1a1a1', fontSize: '1rem', marginTop: '0.5rem' }}>
@@ -153,14 +269,14 @@ export default function Team() {
       <div className="carousel-container">
         <Carousel
           opts={{
-            align: "center",
+            align: "start",
             loop: true,
           }}
-          className="w-full"
+          className="w-full team-carousel"
         >
-          <CarouselContent className="-ml-4 flex items-center">
+          <CarouselContent className="-ml-4">
             {filteredMembers.map((member) => (
-              <CarouselItem key={member.id} className="pl-4 basis-1/4 md:basis-1/6 lg:basis-1/6 flex justify-center">
+              <CarouselItem key={member.id} className="pl-4 basis-1/3 md:basis-1/5 lg:basis-1/6 flex justify-center items-center">
                 <div 
                   className={`carousel-avatar-btn ${selectedMember?.id === member.id ? 'selected' : ''}`}
                   onClick={() => setSelectedMember(member)}
@@ -170,8 +286,9 @@ export default function Team() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="bg-transparent border-white/20 text-white hover:bg-white hover:text-black" />
-          <CarouselNext className="bg-transparent border-white/20 text-white hover:bg-white hover:text-black" />
+          {/* UPDATED ARROWS: Moved inside (-left-4) and added z-index to ensure visibility */}
+          <CarouselPrevious className="hidden md:flex -left-4 bg-black/50 border-white text-white hover:bg-white hover:text-black z-50" />
+          <CarouselNext className="hidden md:flex -right-4 bg-black/50 border-white text-white hover:bg-white hover:text-black z-50" />
         </Carousel>
       </div>
     </div>
