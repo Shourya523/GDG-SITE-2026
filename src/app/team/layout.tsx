@@ -3,7 +3,7 @@ import Navbar from "@/src/component/Navbar";
 import Footer from "@/src/component/Footer";
 
 export const metadata: Metadata = {
-  title: "GDG Team | Meet the Builders",
+  title: "GDG Team | Where Builders Come Together",
   description: "Meet the Mentors, Team Leads, and Core Team behind GDG.",
 };
 
