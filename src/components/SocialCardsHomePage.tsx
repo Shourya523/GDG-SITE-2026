@@ -3,7 +3,8 @@ import {
   Instagram, 
   Youtube, 
   MessageSquare, 
-  Twitter, 
+  Twitter,
+  XIcon, 
   Github, 
   Facebook 
 } from "lucide-react";
@@ -27,12 +28,12 @@ const SocialItem = ({ icon: Icon, label, href, className }: SocialItemProps) => 
 
 export default function SocialHomePage() {
   const socials = [
-    { icon: Instagram, label: "Instagram", href: "#", className: "instagram" },
-    { icon: Youtube, label: "YouTube", href: "#", className: "youtube" },
-    { icon: MessageSquare, label: "Discord", href: "#", className: "discord" },
-    { icon: Twitter, label: "Twitter", href: "#", className: "twitter" },
-    { icon: Github, label: "GitHub", href: "#", className: "github" },
-    { icon: Facebook, label: "Facebook", href: "#", className: "facebook" },
+    { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/gdg_jiit/", className: "instagram" },
+    { icon: Youtube, label: "YouTube", href: "https://www.youtube.com/channel/UCsq-cbi1tZStoem3KVQVjCg", className: "youtube" },
+    { icon: MessageSquare, label: "Discord", href: "https://discord.com/invite/HqatsVyq5H", className: "discord" },
+    { icon: Twitter, label: "Twitter", href: "https://x.com/gdgjiit", className: "twitter" },
+    { icon: Github, label: "GitHub", href: "https://github.com/dsc-jiit-128", className: "github" },
+    { icon: Facebook, label: "Facebook", href: "https://www.facebook.com/gdscjiit/", className: "facebook" },
   ];
 
   return (
