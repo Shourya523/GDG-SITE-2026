@@ -14,11 +14,9 @@ export default function TeamsLayout({
 }>) {
   return (
     <section className="teams-layout">
-      <Navbar /> 
       <main className="min-h-screen pt-20">
         {children}
       </main>
-      <Footer />
     </section>
   );
 }
