@@ -1,228 +1,242 @@
-/* --- team.css --- */
 
-/* Inherit font from your layout/globals, or explicit: */
 .team-container {
   font-family: 'Albert Sans', 'Google Sans', sans-serif;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 4rem 1rem;
+  padding: 2rem 1rem 15rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  overflow-y: visible;
 }
 
-/* --- The Main Active Card --- */
-.active-profile-card {
-  /* Dark Grey Background matching image */
-  background: #1a1a1a; 
-  border-radius: 20px;
-  padding: 3rem 4rem;
-  width: 100%;
-  max-width: 900px;
-  min-height: 380px;
-  
-  display: flex;
-  align-items: center;
-  gap: 4rem;
-  
-  /* Subtle border/shadow */
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  
-  margin-bottom: 5rem; /* Space between card and carousel */
-  opacity: 0;
-  animation: fadeIn 0.5s ease forwards;
-}
 
-@keyframes fadeIn {
-  to { opacity: 1; }
-}
-
-/* --- Gradient Profile Image --- */
-.profile-image-container {
+.team-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  margin-top: 5rem;
+  z-index: 10;
   position: relative;
-  width: 250px;
-  height: 250px;
-  flex-shrink: 0;
 }
 
-/* The Google Colors Gradient Ring */
-.gradient-ring {
-  position: absolute;
-  inset: -4px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #4285F4, #EA4335, #FBBC04, #34A853);
-  z-index: 1;
-}
-
-.profile-image-wrapper {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  overflow: hidden;
-  z-index: 2;
-  border: 4px solid #1a1a1a; /* Creates gap between image and gradient */
-  background: #1a1a1a;
-}
-
-.profile-image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.profile-image-wrapper img:hover {
-  transform: scale(1.1);
-}
-
-/* --- Typography --- */
-.profile-info {
-  flex: 1;
-  text-align: left;
-}
-
-.profile-title {
-  font-size: 3rem;
+.header-title {
+  font-size: 3.5rem;
   font-weight: 700;
-  color: #fff;
-  margin-bottom: 0.5rem;
-  line-height: 1.1;
-}
-
-.highlight-name {
-  background: linear-gradient(to right, #EA4335, #FBBC04, #34A853, #4285F4);
+  background: linear-gradient(to bottom, #ffffff, #a1a1a1);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
 }
 
-.profile-quote {
-  font-size: 1rem;
-  color: #a1a1a1; /* Muted text */
-  margin-bottom: 2rem;
-  font-weight: 400;
+.header-subtitle {
+  color: #a1a1a1;
+  font-size: 1.1rem;
 }
 
-.social-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
 
-.social-item {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  color: #fff;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: transform 0.2s;
-}
-
-.social-item:hover {
-  transform: translateY(-2px);
-  color: #FBBC04; /* Yellow accent on hover */
-}
-
-/* --- Navigation Tabs --- */
 .category-nav {
   display: flex;
   justify-content: center;
-  gap: 4rem;
-  width: 100%;
-  max-width: 900px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding-bottom: 1rem;
-  margin-bottom: 2rem;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.5rem;
+  border-radius: 99px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 100px;
+  z-index: 50;
+  transition: transform 0.3s ease;
 }
 
 .nav-item {
-  background: none;
+  background: transparent;
   border: none;
-  color: #717171;
-  font-size: 1.25rem;
-  font-weight: 600;
+  color: #a1a1a1;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.6rem 1.5rem;
+  border-radius: 99px;
   cursor: pointer;
-  padding-bottom: 0.5rem;
-  position: relative;
-  transition: color 0.3s;
-}
-
-.nav-item:hover {
-  color: #d1d1d1;
+  transition: all 0.3s ease;
 }
 
 .nav-item.active {
-  color: #fff;
-}
-
-.nav-item.active::after {
-  content: '';
-  position: absolute;
-  bottom: -1.5rem; /* Matches border-bottom of container */
-  left: 0;
-  width: 100%;
-  height: 3px;
   background: #fff;
-  border-radius: 2px 2px 0 0;
+  color: #000;
+  font-weight: 600;
 }
 
-/* --- Circular Carousel --- */
-.carousel-container {
+
+.team-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  column-gap: 2.5rem;
+
+  row-gap: 6rem; 
+  
   width: 100%;
-  max-width: 800px;
+  padding-top: 2rem;
+  perspective: 1000px; 
+}
+
+.profile-card-wrapper {
+
+  will-change: transform;
+  position: relative; 
+}
+
+.profile-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #121212;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  aspect-ratio: 3/4;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: 1;
+}
+
+.profile-card:hover {
+  transform: scale(1.03); 
+  border-color: var(--accent-color);
+  box-shadow: 0 20px 50px -10px var(--accent-glow);
+  z-index: 10;
+}
+
+.color-blue { --accent-color: #4285F4; --accent-glow: rgba(66, 133, 244, 0.4); }
+.color-red { --accent-color: #EA4335; --accent-glow: rgba(234, 67, 53, 0.4); }
+.color-yellow { --accent-color: #FBBC04; --accent-glow: rgba(251, 188, 5, 0.4); }
+.color-green { --accent-color: #34A853; --accent-glow: rgba(52, 168, 83, 0.4); }
+
+.image-container {
+  width: 100%;
+  height: 100%;
   position: relative;
 }
 
-.carousel-avatar-btn {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 2px solid transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  filter: grayscale(100%);
-  opacity: 0.6;
-}
-
-.carousel-avatar-btn.selected,
-.carousel-avatar-btn:hover {
-  transform: scale(1.15);
-  border-color: #fff;
-  filter: grayscale(0%);
-  opacity: 1;
-}
-
-.carousel-avatar-btn img {
+.profile-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.7s ease;
+  filter: brightness(0.9);
 }
 
-/* Mobile Responsiveness */
+.profile-card:hover .profile-img {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+.gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.card-info-pill {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(12px);
+  padding: 0.4rem;
+  padding-right: 1.2rem;
+  border-radius: 99px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: border-color 0.3s ease;
+}
+
+.profile-card:hover .card-info-pill {
+  background: rgba(10, 10, 10, 0.8);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.name-tag {
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 0.5rem 1.4rem;
+  border-radius: 99px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.color-yellow .name-tag { color: #000; }
+
+.role-text {
+  color: #e0e0e0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: right;
+  flex: 1;
+}
+
+.social-overlay {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  opacity: 0;
+  transform: translateX(10px) translateY(-10px);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.profile-card:hover .social-overlay {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
+.social-overlay a {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.2s;
+}
+
+.social-overlay a:hover {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.color-yellow .social-overlay a:hover { color: #000; }
+
 @media (max-width: 768px) {
-  .active-profile-card {
-    flex-direction: column;
-    padding: 2rem;
-    text-align: center;
-    gap: 2rem;
-  }
-  
-  .profile-info {
-    text-align: center;
-  }
-  
-  .social-links {
-    justify-content: center;
-  }
-  
-  .category-nav {
+  .team-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 1.5rem;
-    font-size: 1rem;
+    row-gap: 2rem;
+  }
+  .profile-card-wrapper {
+    transform: none !important; 
+    margin-bottom: 0;
   }
 }
