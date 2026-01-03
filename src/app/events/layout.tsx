@@ -1,8 +1,8 @@
 import type { Metadata } from "next"; 
 import EventsBottomNavbar from "@/src/component/EventsBottomNavBar";
 export const metadata: Metadata = {
-    title: "GDG Events",
-    description: "From beginner sessions to hackathons—explore the events where the GDG community learns, builds, and connects.",
+    title: "GDG Events | Where Builders Come Together",
+    description: "Explore GDG events where developers build real projects, collaborate in hackathons, and grow through hands-on sessions.",
 };
 export default function EventsLayout({
     children,
