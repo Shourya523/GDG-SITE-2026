@@ -1,0 +1,23 @@
+.eventpage_container {
+  min-height: 100vh;
+  padding: 120px 40px;
+}
+
+.eventpage_grid {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  /* Using 'grid' instead of 'flex' prevents overlapping */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

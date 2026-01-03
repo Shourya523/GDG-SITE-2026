@@ -23,15 +23,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${albertSans.variable} antialiased`}>
-        {/* GLOBAL BACKGROUND */}
         <div className="grid-background" />
         <div className="cursor-spotlight" />
-
-        {/* FLOATING SHAPES */}
         <div className="shape-decoration shape-1" />
         <div className="shape-decoration shape-2" />
         <div className="shape-decoration shape-3" />
         <div className="shape-decoration shape-4" />
+        
         <Navbar />
         {children}
         <Footer />

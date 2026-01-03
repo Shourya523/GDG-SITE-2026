@@ -185,7 +185,15 @@ body {
 .hero {
   position: relative; /* Container for the absolute logo */
 }
-
+.hero-badge {
+  background-color: var(--accent-soft);
+  border: 1px solid var(--border);
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
 .hero-stats {
   display: flex;
   gap: 3rem;

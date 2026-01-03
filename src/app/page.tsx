@@ -89,18 +89,12 @@ export default function HomePage() {
   }, []);
 
   return (
-    <section>
-
-      <div ref={containerRef}>
-        <div className="grid-background" />
-        <div className="cursor-spotlight" />
-
-        <div className="shape shape-decoration shape-1" />
-        <div className="shape shape-decoration shape-2" />
-        <div className="shape shape-decoration shape-3" />
-        <div className="shape shape-decoration shape-4" />
+    <section >
 
         <section className="hero">
+          <div className={`hero-badge fade-up${fade ? ' visible' : ''}`}>
+                    Google Developer Groups JIIT 128
+          </div>
           <img
             src="/gdg-outlined-logo.png"
             alt="GDG Logo"
@@ -117,7 +111,7 @@ export default function HomePage() {
 
           <div className={`hero-actions fade-up${fade ? " visible" : ""}`}>
             <a href="#" className="btn-primary">
-              Study Jams
+              View Events
             </a>
             <a
               href="#"
@@ -130,7 +124,7 @@ export default function HomePage() {
                 textDecoration: "none"
               }}
             >
-              View Events
+              Study Jams
             </a>
           </div>
 
@@ -203,7 +197,6 @@ export default function HomePage() {
 
           </div>
         </section>
-      </div>
     </section>
   );
 }
