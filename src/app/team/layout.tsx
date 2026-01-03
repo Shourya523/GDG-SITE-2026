@@ -1,6 +1,6 @@
 import type { Metadata } from "next"; 
-import Navbar from "@/src/component/Navbar";
-import Footer from "@/src/component/Footer";
+import Navbar from "@/src/components/Navbar";
+import Footer from "@/src/components/Footer";
 
 export const metadata: Metadata = {
   title: "GDG Team | Meet the Builders",

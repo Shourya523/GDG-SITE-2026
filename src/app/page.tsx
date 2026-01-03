@@ -16,9 +16,9 @@ import {
   Code2,
   Globe
 } from "lucide-react";
-import HomePageCards from "@/src/component/HomePageCards";
-import HomePageEventCards from "../component/HomePageEventCards";
-import SocialHomePage from "../component/SocialCardsHomePage";
+import HomePageCards from "@/src/components/HomePageCards";
+import HomePageEventCards from "../components/HomePageEventCards";
+import SocialHomePage from "../components/SocialCardsHomePage";
 
 export default function HomePage() {
   const [fade, setFade] = useState(false);

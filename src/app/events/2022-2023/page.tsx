@@ -1,8 +1,8 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import EventCard from "@/src/component/EventsCard";
-import EventsCategoryBar from "@/src/component/EventsCategoryBar";
+import EventCard from "@/src/components/EventsCard";
+import EventsCategoryBar from "@/src/components/EventsCategoryBar";
 import styles from "./EventsPage.module.css";
 import {useEffect, useState } from "react";
 
