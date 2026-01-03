@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import EventsPageClient2024_2025 from "../2023-2024/EventsPageClient2023_2024";
+import EventsPageClient2024_2025 from "./EventsPageClient2024_2025";
 
 export default function Page() {
   return (

@@ -6,7 +6,7 @@ import EventsCategoryBar from "@/src/components/EventsCategoryBar";
 import styles from "./EventsPage.module.css";
 import { useEffect,useState } from "react";
 
-export default function EventsPage2025_2026() {
+export default function EventsPageClient2025_2026() {
   const searchParams = useSearchParams();
   const activeCategory = searchParams.get("type") || "sessions";
   

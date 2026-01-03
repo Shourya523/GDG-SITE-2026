@@ -6,7 +6,7 @@ import EventsCategoryBar from "@/src/components/EventsCategoryBar";
 import styles from "./EventsPage.module.css";
 import { useEffect,useState } from "react";
 
-export default function EventsPage2024_2025() {
+export default function EventsPageClient2024_2025() {
     const searchParams = useSearchParams();
     
   const [fade, setFade] = useState(false);

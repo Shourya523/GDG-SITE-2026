@@ -4,13 +4,13 @@ import { useSearchParams } from "next/navigation";
 import EventCard from "@/src/components/EventsCard";
 import EventsCategoryBar from "@/src/components/EventsCategoryBar";
 import styles from "./EventsPage.module.css";
-import { useEffect, useState } from "react";
+import {useEffect, useState } from "react";
 
 
-export default function EventsPage2023_2024() {
+export default function EventsPageClient2023_2024() {
   const searchParams = useSearchParams();
   const activeCategory = searchParams.get("type") || "sessions";
-
+  
   const [fade, setFade] = useState(false);
 
   const eventData: Record<string, any[]> = {
@@ -38,7 +38,7 @@ export default function EventsPage2023_2024() {
   };
 
   const filteredEvents = eventData[activeCategory] || [];
-  useEffect(() => {
+    useEffect(() => {
     const timeout = setTimeout(() => setFade(true), 50);
     const handleMouseMove = (e: MouseEvent) => {
       document.documentElement.style.setProperty("--mouse-x", `${e.clientX}px`);
@@ -52,12 +52,12 @@ export default function EventsPage2023_2024() {
   }, []);
 
   return (
-    <main className={styles.eventpage_container}>
+    <main className={styles.container}>
       <EventsCategoryBar />
-      <div className={styles.eventpage_grid}>
-        {filteredEvents.length ? (
+      <div className={styles.grid}>
+        {filteredEvents.length > 0 ? (
           filteredEvents.map((event, index) => (
-            <EventCard
+            <EventCard 
               key={`${activeCategory}-${index}`}
               title={event.title}
               description={event.description}
@@ -65,9 +65,7 @@ export default function EventsPage2023_2024() {
             />
           ))
         ) : (
-          <p className={styles.noEvents}>
-            No events found for this category.
-          </p>
+          <p className={styles.noEvents}>No events found for this category.</p>
         )}
       </div>
     </main>
