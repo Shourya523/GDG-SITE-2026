@@ -315,7 +315,7 @@ export default function Team() {
         >
           <CarouselContent className="-ml-2">
             {filteredMembers.map((member) => (
-              <CarouselItem key={member.id} className="pl-1 basis-1/7 md:basis-1/9 lg:basis-1/12 flex justify-center items-center">
+              <CarouselItem key={member.id} className="pl-1 basis-1/5 md:basis-1/9 lg:basis-1/12 flex justify-center items-center">
                 <div
                   className={`carousel-avatar-btn ${selectedMember?.id === member.id ? 'selected' : ''}`}
                   onClick={() => setSelectedMember(member)}
