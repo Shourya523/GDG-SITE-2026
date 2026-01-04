@@ -285,8 +285,12 @@ export default function Team() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="flex -left-12 bg-zinc-800 border-zinc-700 text-white hover:bg-zinc-700 hover:text-white" />
-          <CarouselNext className="flex -right-12 bg-zinc-800 border-zinc-700 text-white hover:bg-zinc-700 hover:text-white" />
+          <CarouselPrevious 
+            className="custom-carousel-btn flex -left-12" 
+          />
+          <CarouselNext 
+            className="custom-carousel-btn flex -right-12" 
+          />
         </Carousel>
       </div>
     </div>
