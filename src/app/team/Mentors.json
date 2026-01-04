@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Robert Richards",
+    "role": "Faculty Advisor",
+    "image": "https://github.com/shadcn.png",
+    "socials": {
+      "linkedin": "#",
+      "twitter": "#"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Prof. Sarah Miller",
+    "role": "Technical Mentor",
+    "image": "https://github.com/shadcn.png",
+    "socials": {
+      "linkedin": "#",
+      "email": "mailto:example@gmail.com"
+    }
+  }
+]

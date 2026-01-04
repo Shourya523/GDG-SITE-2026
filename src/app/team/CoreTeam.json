@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "David Chen",
+    "role": "Technical Head",
+    "image": "https://github.com/shadcn.png",
+    "socials": {
+      "linkedin": "#",
+      "github": "#"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Emily Davis",
+    "role": "Event Management",
+    "image": "https://github.com/shadcn.png",
+    "socials": {
+      "linkedin": "#",
+      "instagram": "#"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Michael Brown",
+    "role": "Creative Lead",
+    "image": "https://github.com/shadcn.png",
+    "socials": {
+      "linkedin": "#",
+      "behance": "#"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Jessica Wilson",
+    "role": "Social Media Lead",
+    "image": "https://github.com/shadcn.png",
+    "socials": {
+      "linkedin": "#",
+      "instagram": "#"
+    }
+  }
+]
