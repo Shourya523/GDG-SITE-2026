@@ -151,6 +151,9 @@
 }
 
 @media (max-width: 640px) {
+    .not-found-badge{
+        margin-top: 3rem;
+    }
   .not-found-actions {
     flex-direction: column;
     padding: 0 2rem;
@@ -162,7 +165,8 @@
   }
 
   .not-found-footer-pill {
-    bottom: 2rem;
+    margin-top:3rem;
+    bottom: 1rem;
     width: 75%;
   }
 }
