@@ -87,36 +87,7 @@
   justify-content: center;
 }
 
-.btn-not-found-primary {
-  background: #ededed;
-  color: #0a0a0a;
-  padding: 0.8rem 2.5rem;
-  border-radius: 999px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
 
-.btn-not-found-primary:hover {
-  transform: translateY(-3px);
-  background: #ffffff;
-}
-
-.btn-not-found-secondary {
-  background: rgba(255, 255, 255, 0.03);
-  color: #ededed;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 0.8rem 2.5rem;
-  border-radius: 999px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.btn-not-found-secondary:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.3);
-}
 
 .not-found-footer-pill {
   position: absolute;
@@ -159,14 +130,9 @@
     padding: 0 2rem;
   }
   
-  .btn-not-found-primary, .btn-not-found-secondary {
-    width: 100%;
-    text-align: center;
-  }
 
   .not-found-footer-pill {
     margin-top:3rem;
-    bottom: 2rem;
     width: 75%;
   }
 }
