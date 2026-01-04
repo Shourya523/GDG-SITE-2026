@@ -19,6 +19,7 @@ import {
 import HomePageCards from "@/src/components/HomePageCards";
 import HomePageEventCards from "../components/HomePageEventCards";
 import SocialHomePage from "../components/SocialCardsHomePage";
+import { TextAnimate } from "../components/ui/text-animate";
 
 export default function HomePage() {
   const [fade, setFade] = useState(false);
@@ -91,112 +92,123 @@ export default function HomePage() {
   return (
     <section >
 
-        <section className="hero">
-          <div className={`hero-badge fade-up${fade ? ' visible' : ''}`}>
-                    Google Developer Groups JIIT 128
+      <section className="hero">
+        <div className={`hero-badge fade-up${fade ? ' visible' : ''}`}>
+          Google Developer Groups JIIT 128
+        </div>
+        <img
+          src="/gdg-outlined-logo.png"
+          alt="GDG Logo"
+          className={`hero-background-logo${fade ? " visible" : ""}`}
+        />
+
+        <div className={`hero-title fade-up${fade ? " visible" : ""}`}>
+          {currTitle}
+        </div>
+
+        <p className={`hero-subtext fade-up${fade ? " visible" : ""}`}>
+          {currSubTitle}
+        </p>
+
+        <div className={`hero-actions fade-up${fade ? " visible" : ""}`}>
+          <a
+            href="/events"
+            className="btn-secondary-demo-dashboard"
+            style={{
+              border: "1px solid var(--border)",
+              padding: "0.8rem 2rem",
+              borderRadius: "999px",
+              color: "var(--bg-main)",
+              textDecoration: "none",
+              backgroundColor:"var(--text-primary)"
+            }}
+          >
+            View Events
+          </a>
+          <a
+            href="#"
+            className="btn-secondary-demo-dashboard"
+            style={{
+              border: "1px solid var(--border)",
+              padding: "0.8rem 2rem",
+              borderRadius: "999px",
+              color: "var(--text-primary)",
+              textDecoration: "none"
+            }}
+          >
+            Study Jams
+          </a>
+        </div>
+
+        <div className={`fade-up ${fade ? "visible" : ""}`}>
+          <SocialHomePage />
+        </div>
+      </section>
+      <section className={`what-do-we-do fade-up ${fade ? "visible" : ""}`}>
+        <span className="section-label">Our Impact</span>
+
+        <div className="content-wrapper">
+          <div className="text-content">
+            <h2>What do we do?</h2>
+            <p>
+              With our team's motto being <span className="motto-highlight">"Giving Direction to Greatness"</span>,
+              we help students climb mountains on their own, as high as possible.
+              We provide the tools, community, and guidance to turn curiosity into industry-ready expertise.
+            </p>
           </div>
-          <img
-            src="/gdg-outlined-logo.png"
-            alt="GDG Logo"
-            className={`hero-background-logo${fade ? " visible" : ""}`}
+
+          <div className="flagship-cards">
+            <HomePageCards
+              heading="BitBox"
+              icon={Zap}
+              description="Flagship Hackathon"
+            />
+
+            <HomePageCards
+              heading="ExploreML"
+              icon={Sparkles}
+              description="AI/ML Deep Dive"
+            />
+
+            <HomePageCards
+              heading="Workshops & Meetups"
+              icon={Globe}
+              description="Weekly Tech Sessions"
+            />
+          </div>
+        </div>
+      </section>
+      <section className={`events-section fade-up ${fade ? "visible" : ""}`}>
+        <span className="section-label">Our Programs</span>
+        <h2 className="hero-title" style={{ fontSize: "3rem" }}>Events</h2>
+
+        <div className="events-grid">
+          <HomePageEventCards
+            heading="Hackathons"
+            description="The idea of conducting hackathons is to make students code collaboratively from scratch to end with a working prototype."
+            variant="hackathons"
           />
 
-          <div className={`hero-title fade-up${fade ? " visible" : ""}`}>
-            {currTitle}
-          </div>
+          <HomePageEventCards
+            heading="Sessions"
+            description="Small sessions for the students to showcase their projects, achievements and for getting to know about the current trends."
+            variant="sessions"
+          />
 
-          <p className={`hero-subtext fade-up${fade ? " visible" : ""}`}>
-            {currSubTitle}
-          </p>
+          <HomePageEventCards
+            heading="Study Jams"
+            description="Study Jams are community-run groups for Developers. Whether you are a beginner or an experienced developer, you get to learn new things."
+            variant="study-jams"
+          />
 
-          <div className={`hero-actions fade-up${fade ? " visible" : ""}`}>
-            <a href="#" className="btn-primary">
-              View Events
-            </a>
-            <a
-              href="#"
-              className="btn-secondary-demo-dashboard"
-              style={{
-                border: "1px solid var(--border)",
-                padding: "0.8rem 2rem",
-                borderRadius: "999px",
-                color: "var(--text-primary)",
-                textDecoration: "none"
-              }}
-            >
-              Study Jams
-            </a>
-          </div>
+          <HomePageEventCards
+            heading="Meetups"
+            description="Regular meetings are organised for the students who share the same technical interests, so they can get connected with each other."
+            variant="meetups"
+          />
 
-          <div className={`fade-up ${fade ? "visible" : ""}`}>
-            <SocialHomePage />
-          </div>
-        </section>
-        <section className={`what-do-we-do fade-up ${fade ? "visible" : ""}`}>
-          <span className="section-label">Our Impact</span>
-
-          <div className="content-wrapper">
-            <div className="text-content">
-              <h2>What do we do?</h2>
-              <p>
-                With our team's motto being <span className="motto-highlight">"Giving Direction to Greatness"</span>,
-                we help students climb mountains on their own, as high as possible.
-                We provide the tools, community, and guidance to turn curiosity into industry-ready expertise.
-              </p>
-            </div>
-
-            <div className="flagship-cards">
-              <HomePageCards
-                heading="BitBox"
-                icon={Zap}
-                description="Flagship Hackathon"
-              />
-
-              <HomePageCards
-                heading="ExploreML"
-                icon={Sparkles}
-                description="AI/ML Deep Dive"
-              />
-
-              <HomePageCards
-                heading="Workshops & Meetups"
-                icon={Globe}
-                description="Weekly Tech Sessions"
-              />
-            </div>
-          </div>
-        </section>
-        <section className={`events-section fade-up ${fade ? "visible" : ""}`}>
-          <span className="section-label">Our Programs</span>
-          <h2 className="hero-title" style={{ fontSize: "3rem" }}>Events</h2>
-
-          <div className="events-grid">
-            <HomePageEventCards
-              heading="Hackathons"
-              description="The idea of conducting hackathons is to make students code collaboratively from scratch to end with a working prototype."
-              variant="hackathons"
-            />
-
-            <HomePageEventCards
-              heading="Sessions"
-              description="Small sessions for the students to showcase their projects, achievements and for getting to know about the current trends."
-              variant="sessions"
-            />
-
-            <HomePageEventCards
-              heading="Study Jams"
-              description="Study Jams are community-run groups for Developers. Whether you are a beginner or an experienced developer, you get to learn new things."
-              variant="study-jams"
-            />
-
-            <HomePageEventCards
-              heading="Meetups"
-              description="Regular meetings are organised for the students who share the same technical interests, so they can get connected with each other."
-              variant="meetups"
-            />
-
-          </div>
-        </section>
+        </div>
+      </section>
     </section>
   );
 }

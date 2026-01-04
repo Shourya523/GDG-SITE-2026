@@ -2,7 +2,7 @@
   font-family: 'Albert Sans', 'Google Sans', sans-serif;
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 4rem auto;
   padding: 4rem 1rem;
   display: flex;
   flex-direction: column;
@@ -11,7 +11,7 @@
 }
 
 .active-profile-card {
-  background: #1a1a1a; 
+  background: rgba(26, 26, 26,0.3); 
   border-radius: 20px;
   padding: 3rem 4rem;
   width: 100%;
@@ -20,7 +20,7 @@
   display: flex;
   align-items: center;
   gap: 4rem;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   margin-bottom: 3rem;
   opacity: 0;

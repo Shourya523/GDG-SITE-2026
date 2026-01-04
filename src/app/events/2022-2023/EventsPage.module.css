@@ -1,6 +1,6 @@
 .eventpage_container {
   min-height: 100vh;
-  padding: 120px 40px;
+  padding: 80px 40px;
 }
 
 .eventpage_grid {
@@ -12,11 +12,15 @@
   justify-items: center;
 }
 
-
-
 @media (max-width: 480px) {
-  .grid {
+  .eventpage_container {
+    padding: 100px 16px 60px 10px; 
+  }
+
+  .eventpage_grid {
     grid-template-columns: 1fr;
     gap: 24px;
+    justify-items: start; 
+    margin-left: 0;
   }
 }

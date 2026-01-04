@@ -18,13 +18,21 @@
   --border: rgba(255, 255, 255, 0.08);
   --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.4);
 
-  /* Grid */
   --grid-color: rgba(255, 255, 255, 0.03);
   --grid-size: 30px;
 }
+
 html,
 body {
   height: 100%;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html, body {
+    font-size: 16px;
+  }
+  
 }
 
 body {
@@ -35,6 +43,7 @@ body {
   font-family: var(--font-albert-sans), system-ui, sans-serif;
   overflow-x: hidden;
 }
+
 .grid-background {
   position: fixed;
   inset: 0;
@@ -52,7 +61,7 @@ body {
   pointer-events: none;
   z-index: -2;
   background: radial-gradient(
-    600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    clamp(300px, 50vw, 600px) circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
     rgba(217, 164, 65, 0.08),
     transparent 80%
   );
@@ -61,27 +70,41 @@ body {
 .shape-decoration {
   position: fixed;
   z-index: -4;
-  width: 180px;
-  height: 60px;
-  border: 4px solid var(--accent);
+  width: 100px;
+  height: 35px;
+  border: 2px solid var(--accent);
   border-radius: 999px;
   opacity: 0.06;
   pointer-events: none;
-  filter: blur(1px) drop-shadow(0 0 20px var(--accent));
-  animation: floating-shape 10s ease-in-out infinite alternate;
+  filter: blur(1px) drop-shadow(0 0 15px var(--accent));
+  animation: floating-shape 8s ease-in-out infinite alternate;
 }
 
 .shape-decoration::after {
   content: "";
   position: absolute;
-  top: 45px;
+  top: 25px;
   left: 0;
-  width: 180px;
-  height: 60px;
-  border: 4px solid var(--accent);
+  width: 100px;
+  height: 35px;
+  border: 2px solid var(--accent);
   border-radius: 999px;
   transform: rotate(60deg);
   transform-origin: left center;
+}
+
+@media (min-width: 768px) {
+  .shape-decoration {
+    width: 180px;
+    height: 60px;
+    border-width: 4px;
+  }
+  .shape-decoration::after {
+    top: 45px;
+    width: 180px;
+    height: 60px;
+    border-width: 4px;
+  }
 }
 
 .shape-1 {
@@ -93,7 +116,7 @@ body {
 .shape-2 {
   bottom: 15%;
   left: 10%;
-  transform: rotate(45deg) scale(1.4);
+  transform: rotate(45deg) scale(1.1);
 }
 
 .shape-3 {
@@ -105,7 +128,16 @@ body {
 .shape-4 {
   bottom: 5%;
   right: 5%;
-  transform: rotate(160deg) scale(1.2);
+  transform: rotate(160deg) scale(1.1);
+}
+
+@media (max-width: 480px) {
+  .shape-3, .shape-4 {
+    display: none;
+  }
+  .shape-1{
+    display: none;
+  }
 }
 
 @keyframes floating-shape {
@@ -115,13 +147,14 @@ body {
   }
   to {
     opacity: 0.04;
-    transform: translateY(30px);
+    transform: translateY(15px);
   }
 }
 
 .glass {
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-soft);
 }

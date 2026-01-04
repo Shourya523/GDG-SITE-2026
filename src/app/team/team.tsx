@@ -8,7 +8,10 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
+} from "@/src/components/ui/carousel";
+import { TextAnimate } from "@/src/components/ui/text-animate";
+
+
 
 type Category = "Mentors" | "Team Leads" | "Core Team";
 
@@ -28,8 +31,8 @@ interface TeamMember {
 }
 
 const getAvatar = (seed: string) => `https://api.dicebear.com/7.x/avataaars/svg?seed=${seed}&backgroundColor=b6e3f4,c0aede,d1d4f9`;
-
 const teamData: TeamMember[] = [
+
   // --- MENTORS (10 Items) ---
   {
     id: 1, name: "Dr. Anubha", role: "Faculty Advisor", category: "Mentors",
@@ -187,8 +190,12 @@ const teamData: TeamMember[] = [
   }
 ];
 
+
+
 export default function Team() {
+
   const [activeCategory, setActiveCategory] = useState<Category>("Team Leads");
+  const [fade, setFade] = useState(false);
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
 
   const filteredMembers = teamData.filter(m => m.category === activeCategory);
@@ -200,6 +207,21 @@ export default function Team() {
       setSelectedMember(null);
     }
   }, [activeCategory]);
+  useEffect(() => {
+    const timeout = setTimeout(() => setFade(true), 50);
+
+    const handleMouseMove = (e: MouseEvent) => {
+      document.documentElement.style.setProperty("--mouse-x", `${e.clientX}px`);
+      document.documentElement.style.setProperty("--mouse-y", `${e.clientY}px`);
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      clearTimeout(timeout);
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
 
   return (
     <div className="team-container">
@@ -218,11 +240,29 @@ export default function Team() {
           </div>
 
           <div className="profile-info">
-            <h2 className="profile-title">
-              Hi, my name is <br />
-              <span className="highlight-name">{selectedMember.name}</span>
+            <h2 className="profile-title"> Hi, my name is <br />
+              <span className="highlight-name">
+                {selectedMember.name}
+              </span>
             </h2>
-            <p className="profile-quote">{selectedMember.quote}</p>
+
+
+
+            <p className="profile-quote">
+              <TextAnimate
+                as="span"
+                key={`${selectedMember.id}-quote`}
+                by="word"
+                animation="blurInUp"
+                duration={0.5}
+                delay={0}
+                once={false}
+              >
+                {selectedMember.quote}
+              </TextAnimate>
+            </p>
+
+
 
             <div className="social-links">
               {selectedMember.socials.instagram && (
@@ -267,7 +307,7 @@ export default function Team() {
       <div className="carousel-container">
         <Carousel
           opts={{
-            align: "start",
+            align: "center",
             loop: true,
             dragFree: true,
           }}
@@ -276,7 +316,7 @@ export default function Team() {
           <CarouselContent className="-ml-2">
             {filteredMembers.map((member) => (
               <CarouselItem key={member.id} className="pl-1 basis-1/7 md:basis-1/9 lg:basis-1/12 flex justify-center items-center">
-                <div 
+                <div
                   className={`carousel-avatar-btn ${selectedMember?.id === member.id ? 'selected' : ''}`}
                   onClick={() => setSelectedMember(member)}
                 >
@@ -285,11 +325,11 @@ export default function Team() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious 
-            className="custom-carousel-btn flex -left-12" 
+          <CarouselPrevious
+            className="custom-carousel-btn flex -left-12"
           />
-          <CarouselNext 
-            className="custom-carousel-btn flex -right-12" 
+          <CarouselNext
+            className="custom-carousel-btn flex -right-12"
           />
         </Carousel>
       </div>

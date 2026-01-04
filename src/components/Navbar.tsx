@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
 import "./Navbar.css";
 
 const LATEST_EVENTS_YEAR = "2022-2023";
@@ -15,10 +16,15 @@ const pages = [
 
 export default function Navbar() {
   const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
 
   return (
     <div className="navbar-container">
-      <nav className="navbar">
+      <nav className={`navbar ${isOpen ? "is-open" : ""}`}>
         <div className="navbar-brand">
           <Link href="/" className="navbar-logo-link">
             <div className="navbar-logo">
@@ -31,18 +37,13 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Links */}
-        <ul className="navbar-links">
+        <ul className={`navbar-links ${isOpen ? "show" : ""}`}>
           {pages.map(({ name, route }) => {
             const isEvents = route === "/events";
-
             const isActive = isEvents
               ? pathname === "/events" || pathname.startsWith("/events/")
               : pathname === route || pathname.startsWith(`${route}/`);
-
-            const href = isEvents
-              ? `/events/${LATEST_EVENTS_YEAR}`
-              : route;
+            const href = isEvents ? `/events/${LATEST_EVENTS_YEAR}` : route;
 
             return (
               <li key={route} className={isActive ? "active" : ""}>
@@ -51,6 +52,16 @@ export default function Navbar() {
             );
           })}
         </ul>
+
+        <button 
+          className="hamburger" 
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
+        >
+          <div className={`bar ${isOpen ? "top" : ""}`}></div>
+          <div className={`bar ${isOpen ? "mid" : ""}`}></div>
+          <div className={`bar ${isOpen ? "bot" : ""}`}></div>
+        </button>
       </nav>
     </div>
   );
