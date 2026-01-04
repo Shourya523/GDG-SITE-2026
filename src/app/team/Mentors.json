@@ -1,22 +1,119 @@
 [
   {
     "id": 1,
-    "name": "Dr. Robert Richards",
+    "name": "Dr. Anubha",
     "role": "Faculty Advisor",
-    "image": "https://github.com/shadcn.png",
+    "category": "Mentors",
+    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Anubha&backgroundColor=b6e3f4,c0aede,d1d4f9",
+    "quote": "Empowering students to build the future.",
     "socials": {
-      "linkedin": "#",
-      "twitter": "#"
+      "linkedin": "anubha-prof"
     }
   },
   {
     "id": 2,
-    "name": "Prof. Sarah Miller",
+    "name": "Prof. Sharma",
     "role": "Technical Mentor",
-    "image": "https://github.com/shadcn.png",
+    "category": "Mentors",
+    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sharma&backgroundColor=b6e3f4,c0aede,d1d4f9",
+    "quote": "Innovation starts with a single step.",
     "socials": {
-      "linkedin": "#",
-      "email": "mailto:example@gmail.com"
+      "linkedin": "sharma-tech",
+      "github": "sharma-code"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Dr. R.K. Gupta",
+    "role": "Dean of Student Affairs",
+    "category": "Mentors",
+    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Gupta&backgroundColor=b6e3f4,c0aede,d1d4f9",
+    "quote": "Leadership is service, not position.",
+    "socials": {
+      "linkedin": "rk-gupta"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Ms. Priya Das",
+    "role": "Alumni Mentor",
+    "category": "Mentors",
+    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Priya&backgroundColor=b6e3f4,c0aede,d1d4f9",
+    "quote": "Your network is your net worth.",
+    "socials": {
+      "linkedin": "priya-d",
+      "instagram": "priya_life"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Mr. Amit Verma",
+    "role": "Industry Expert",
+    "category": "Mentors",
+    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Amit&backgroundColor=b6e3f4,c0aede,d1d4f9",
+    "quote": "Build things that matter.",
+    "socials": {
+      "linkedin": "amit-verma-ind"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Dr. S. Singh",
+    "role": "Research Guide",
+    "category": "Mentors",
+    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Singh&backgroundColor=b6e3f4,c0aede,d1d4f9",
+    "quote": "Question everything, learn something.",
+    "socials": {
+      "linkedin": "s-singh",
+      "github": "research-singh"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Mrs. Kavita R",
+    "role": "Soft Skills Mentor",
+    "category": "Mentors",
+    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Kavita&backgroundColor=b6e3f4,c0aede,d1d4f9",
+    "quote": "Communication bridges the gap.",
+    "socials": {
+      "instagram": "kavita_speaks",
+      "linkedin": "kavita-r"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Mr. John Doe",
+    "role": "Cloud Architect",
+    "category": "Mentors",
+    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=John&backgroundColor=b6e3f4,c0aede,d1d4f9",
+    "quote": "The sky is not the limit, the cloud is.",
+    "socials": {
+      "github": "johndoe",
+      "linkedin": "john-cloud"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Dr. Emily W",
+    "role": "Data Science Lead",
+    "category": "Mentors",
+    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Emily&backgroundColor=b6e3f4,c0aede,d1d4f9",
+    "quote": "Data tells a story if you listen.",
+    "socials": {
+      "linkedin": "emily-ds",
+      "github": "emily-data"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Prof. Alan T",
+    "role": "Cybersecurity Expert",
+    "category": "Mentors",
+    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Alan&backgroundColor=b6e3f4,c0aede,d1d4f9",
+    "quote": "Security is not a product, it's a process.",
+    "socials": {
+      "github": "alan-sec",
+      "linkedin": "alan-cyber"
     }
   }
 ]

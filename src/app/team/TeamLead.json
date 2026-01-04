@@ -1,24 +1,123 @@
 [
   {
-    "id": 1,
-    "name": "Alex Johnson",
-    "role": "Chapter Lead",
+    "id": 11,
+    "name": "Jinendra Jain",
+    "role": "GDG Organizer",
+    "category": "Team Leads",
     "image": "https://github.com/shadcn.png",
+    "quote": "Code is like humor. If you have to explain it, it's bad.",
     "socials": {
-      "linkedin": "#",
-      "github": "#",
-      "instagram": "#"
+      "instagram": "hattori.03",
+      "linkedin": "jinendra-jain",
+      "github": "jjinendra3",
+      "discord": "jim_k_schrute"
     }
   },
   {
-    "id": 2,
-    "name": "Samantha Lee",
-    "role": "Co-Lead",
-    "image": "https://github.com/shadcn.png",
+    "id": 12,
+    "name": "Aditya Singh",
+    "role": "Tech Lead",
+    "category": "Team Leads",
+    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Aditya&backgroundColor=b6e3f4,c0aede,d1d4f9",
+    "quote": "Talk is cheap. Show me the code.",
     "socials": {
-      "linkedin": "#",
-      "github": "#",
-      "twitter": "#"
+      "linkedin": "aditya-singh",
+      "github": "aditya"
+    }
+  },
+  {
+    "id": 13,
+    "name": "Sarah Connor",
+    "role": "Event Lead",
+    "category": "Team Leads",
+    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah&backgroundColor=b6e3f4,c0aede,d1d4f9",
+    "quote": "The future is what we make it.",
+    "socials": {
+      "instagram": "sarah_c",
+      "linkedin": "sarah-events"
+    }
+  },
+  {
+    "id": 14,
+    "name": "Michael Scott",
+    "role": "Community Lead",
+    "category": "Team Leads",
+    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Michael&backgroundColor=b6e3f4,c0aede,d1d4f9",
+    "quote": "I want people to be afraid of how much they love me.",
+    "socials": {
+      "linkedin": "michael-scott-paper",
+      "instagram": "greatest_boss"
+    }
+  },
+  {
+    "id": 15,
+    "name": "Pam Beesly",
+    "role": "Design Lead",
+    "category": "Team Leads",
+    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Pam&backgroundColor=b6e3f4,c0aede,d1d4f9",
+    "quote": "There’s a lot of beauty in ordinary things.",
+    "socials": {
+      "instagram": "pam_art",
+      "linkedin": "pam-beesly"
+    }
+  },
+  {
+    "id": 16,
+    "name": "Jim Halpert",
+    "role": "Outreach Lead",
+    "category": "Team Leads",
+    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Jim&backgroundColor=b6e3f4,c0aede,d1d4f9",
+    "quote": "Bears. Beets. Battlestar Galactica.",
+    "socials": {
+      "linkedin": "jim-sales",
+      "discord": "big_tuna"
+    }
+  },
+  {
+    "id": 17,
+    "name": "Dwight Schrute",
+    "role": "Logistics Lead",
+    "category": "Team Leads",
+    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Dwight&backgroundColor=b6e3f4,c0aede,d1d4f9",
+    "quote": "False. I am the best lead.",
+    "socials": {
+      "discord": "dwight_shrute",
+      "linkedin": "assistant-regional-mgr"
+    }
+  },
+  {
+    "id": 18,
+    "name": "Ryan Howard",
+    "role": "Innovation Lead",
+    "category": "Team Leads",
+    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Ryan&backgroundColor=b6e3f4,c0aede,d1d4f9",
+    "quote": "I’m the wonder kid.",
+    "socials": {
+      "github": "ryan_temp",
+      "linkedin": "wuphf-founder"
+    }
+  },
+  {
+    "id": 19,
+    "name": "Kelly Kapoor",
+    "role": "Social Media Lead",
+    "category": "Team Leads",
+    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Kelly&backgroundColor=b6e3f4,c0aede,d1d4f9",
+    "quote": "Who says exactly what they’re thinking?",
+    "socials": {
+      "instagram": "kelly_biz",
+      "linkedin": "kelly-customer-svc"
+    }
+  },
+  {
+    "id": 20,
+    "name": "Angela Martin",
+    "role": "Finance Lead",
+    "category": "Team Leads",
+    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Angela&backgroundColor=b6e3f4,c0aede,d1d4f9",
+    "quote": "I don't suffer fools correctly.",
+    "socials": {
+      "linkedin": "angela-acct"
     }
   }
 ]

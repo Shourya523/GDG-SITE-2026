@@ -1,42 +1,122 @@
 [
   {
-    "id": 1,
-    "name": "David Chen",
-    "role": "Technical Head",
-    "image": "https://github.com/shadcn.png",
+    "id": 21,
+    "name": "Rohan Gupta",
+    "role": "Management Lead",
+    "category": "Core Team",
+    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Rohan&backgroundColor=b6e3f4,c0aede,d1d4f9",
+    "quote": "Management is doing things right.",
     "socials": {
-      "linkedin": "#",
-      "github": "#"
+      "instagram": "rohan_g",
+      "linkedin": "rohan-gupta"
     }
   },
   {
-    "id": 2,
-    "name": "Emily Davis",
-    "role": "Event Management",
-    "image": "https://github.com/shadcn.png",
+    "id": 22,
+    "name": "Isha Patel",
+    "role": "Web Developer",
+    "category": "Core Team",
+    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Isha&backgroundColor=b6e3f4,c0aede,d1d4f9",
+    "quote": "Eat. Sleep. Code. Repeat.",
     "socials": {
-      "linkedin": "#",
-      "instagram": "#"
+      "github": "isha_dev",
+      "linkedin": "isha-web"
     }
   },
   {
-    "id": 3,
-    "name": "Michael Brown",
-    "role": "Creative Lead",
-    "image": "https://github.com/shadcn.png",
+    "id": 23,
+    "name": "Rahul Kumar",
+    "role": "Content Writer",
+    "category": "Core Team",
+    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Rahul&backgroundColor=b6e3f4,c0aede,d1d4f9",
+    "quote": "Words have power.",
     "socials": {
-      "linkedin": "#",
-      "behance": "#"
+      "linkedin": "rahul-writes",
+      "instagram": "rahul_poet"
     }
   },
   {
-    "id": 4,
-    "name": "Jessica Wilson",
-    "role": "Social Media Lead",
-    "image": "https://github.com/shadcn.png",
+    "id": 24,
+    "name": "Sneha Reddy",
+    "role": "Graphic Designer",
+    "category": "Core Team",
+    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sneha&backgroundColor=b6e3f4,c0aede,d1d4f9",
+    "quote": "Design is intelligence made visible.",
     "socials": {
-      "linkedin": "#",
-      "instagram": "#"
+      "instagram": "sneha_designs",
+      "linkedin": "sneha-ux"
+    }
+  },
+  {
+    "id": 25,
+    "name": "Vikram Malhotra",
+    "role": "Video Editor",
+    "category": "Core Team",
+    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Vikram&backgroundColor=b6e3f4,c0aede,d1d4f9",
+    "quote": "Fix it in post.",
+    "socials": {
+      "instagram": "vikram_edits",
+      "linkedin": "vikram-vfx"
+    }
+  },
+  {
+    "id": 26,
+    "name": "Pooja Hegde",
+    "role": "PR Coordinator",
+    "category": "Core Team",
+    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Pooja&backgroundColor=b6e3f4,c0aede,d1d4f9",
+    "quote": "Building relationships matters.",
+    "socials": {
+      "linkedin": "pooja-pr",
+      "instagram": "pooja_connects"
+    }
+  },
+  {
+    "id": 27,
+    "name": "Arjun Rampal",
+    "role": "Logistics Member",
+    "category": "Core Team",
+    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Arjun&backgroundColor=b6e3f4,c0aede,d1d4f9",
+    "quote": "Execution is everything.",
+    "socials": {
+      "discord": "arjun_logs",
+      "linkedin": "arjun-ops"
+    }
+  },
+  {
+    "id": 28,
+    "name": "Nisha Singh",
+    "role": "App Developer",
+    "category": "Core Team",
+    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Nisha&backgroundColor=b6e3f4,c0aede,d1d4f9",
+    "quote": "There's an app for that.",
+    "socials": {
+      "github": "nisha_app",
+      "linkedin": "nisha-dev"
+    }
+  },
+  {
+    "id": 29,
+    "name": "Kabir Khan",
+    "role": "Sponsorship Member",
+    "category": "Core Team",
+    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Kabir&backgroundColor=b6e3f4,c0aede,d1d4f9",
+    "quote": "Show me the money.",
+    "socials": {
+      "linkedin": "kabir-corp",
+      "instagram": "kabir_biz"
+    }
+  },
+  {
+    "id": 30,
+    "name": "Zara Ali",
+    "role": "Volunteer",
+    "category": "Core Team",
+    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Zara&backgroundColor=b6e3f4,c0aede,d1d4f9",
+    "quote": "Service to others is the rent you pay.",
+    "socials": {
+      "instagram": "zara_v",
+      "linkedin": "zara-vol"
     }
   }
 ]
