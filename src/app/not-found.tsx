@@ -31,7 +31,7 @@ const NotFound = () => {
 
         <div className="not-found-actions">
           <a
-            href="/events"
+            href="/"
             className="btn-secondary-demo-dashboard"
             style={{
               border: "1px solid var(--border)",
