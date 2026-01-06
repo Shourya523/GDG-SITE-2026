@@ -378,7 +378,7 @@ body {
 
 @media (max-width: 1200px) {
   .hero-badge{
-    margin-top: 7rem;
+    margin-top: 3rem;
   }
   .hero-title {
     font-size: 3.2rem;

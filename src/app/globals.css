@@ -28,14 +28,6 @@ body {
   font-size: 14px;
 }
 
-@media (max-width: 768px) {
-  html, body {
-    font-size: 16px;
-    overflow-x: hidden;
-  }
-  
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -43,7 +35,25 @@ body {
   color: var(--text-primary);
   font-family: var(--font-albert-sans), system-ui, sans-serif;
   overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
 }
+
+@media (max-width: 768px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+  
+  html, body {
+    font-size: 16px;
+  }
+}
+@media (min-width: 769px) {
+  .hidden-desktop {
+    display: none !important;
+  }
+}
+
 
 .grid-background {
   position: fixed;
@@ -108,35 +118,13 @@ body {
   }
 }
 
-.shape-1 {
-  top: 10%;
-  left: 5%;
-  transform: rotate(-15deg);
-}
-
-.shape-2 {
-  bottom: 15%;
-  left: 10%;
-  transform: rotate(45deg) scale(1.1);
-}
-
-.shape-3 {
-  top: 20%;
-  right: 15%;
-  transform: rotate(-120deg);
-}
-
-.shape-4 {
-  bottom: 5%;
-  right: 5%;
-  transform: rotate(160deg) scale(1.1);
-}
+.shape-1 { top: 10%; left: 5%; transform: rotate(-15deg); }
+.shape-2 { bottom: 15%; left: 10%; transform: rotate(45deg) scale(1.1); }
+.shape-3 { top: 20%; right: 15%; transform: rotate(-120deg); }
+.shape-4 { bottom: 5%; right: 5%; transform: rotate(160deg) scale(1.1); }
 
 @media (max-width: 480px) {
-  .shape-3, .shape-4 {
-    display: none;
-  }
-  .shape-1{
+  .shape-1, .shape-3, .shape-4 {
     display: none;
   }
 }
@@ -158,4 +146,14 @@ body {
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-soft);
+}
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

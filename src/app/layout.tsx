@@ -3,6 +3,8 @@ import { Albert_Sans } from "next/font/google";
 import "./globals.css";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { FloatingNav } from "../components/ui/floating-navbar";
+import { Home, Calendar, Users, Rocket, BookOpen } from "lucide-react";
 
 const albertSans = Albert_Sans({
   subsets: ["latin"],
@@ -12,10 +14,18 @@ const albertSans = Albert_Sans({
 
 export const metadata: Metadata = {
   title: "GDG JIIT",
-  description: "Google Developer Groups is a student-led community where developers learn, build, and grow together through hands-on events, collaborative projects, and shared knowledge.",
+  description: "Google Developer Groups is a student-led community.",
 };
 
-export default function RootLayout({
+const navItems = [
+  { name: "Home", link: "/", icon: <Home size={20} /> },
+  { name: "Events", link: "/events/2022-2023", icon: <Calendar size={20} /> },
+  { name: "Team", link: "/team", icon: <Users size={20} /> },
+  { name: "BitBox", link: "/bitbox", icon: <Rocket size={20} /> },
+  { name: "StudyJam", link: "/studyjam", icon: <BookOpen size={20} /> },
+];
+
+export default function layout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -24,13 +34,15 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${albertSans.variable} antialiased`}>
         <div className="grid-background" />
-        <div className="cursor-spotlight" />
-        <div className="shape-decoration shape-1" />
-        <div className="shape-decoration shape-2" />
-        <div className="shape-decoration shape-3" />
-        <div className="shape-decoration shape-4" />
         
-        <Navbar />
+        <div className="hidden-mobile">
+          <Navbar />
+        </div>
+
+        <div className="hidden-desktop">
+          <FloatingNav navItems={navItems} />
+        </div>
+
         {children}
         <Footer />
       </body>

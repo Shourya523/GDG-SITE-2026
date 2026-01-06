@@ -23,6 +23,7 @@ export default function Navbar() {
   }, [pathname]);
 
   return (
+
     <div className="navbar-container">
       <nav className={`navbar ${isOpen ? "is-open" : ""}`}>
         <div className="navbar-brand">
