@@ -33,7 +33,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #0a0a0a;
   overflow: hidden;
 }
 
@@ -134,5 +133,14 @@
   .not-found-footer-pill {
     margin-top:3rem;
     width: 75%;
+    padding: 25px 25px;
+  }
+}
+@media(max-width:360px)
+{
+  .not-found-footer-pill {
+    margin-bottom:-2.75rem;
+    width: 75%;
+    padding: 15px 15px;
   }
 }

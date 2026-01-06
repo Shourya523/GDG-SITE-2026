@@ -18,16 +18,16 @@ export default function EventsCategoryBar() {
   const activeCategory = searchParams.get('type') || 'sessions';
 
   return (
-    <div className="category-bar-container">
-      <nav className="category-nav">
+    <div className="eventcategory-container">
+      <nav className="eventcategory-nav">
         {categories.map((cat) => (
           <Link
             key={cat.id}
             href={`${pathname}?type=${cat.id}`}
-            className={`category-item ${activeCategory === cat.id ? "active" : ""}`}
+            className={`eventcategory-item ${activeCategory === cat.id ? "eventcategory-active" : ""}`}
           >
-            <span className="category-name">{cat.name}</span>
-            {activeCategory === cat.id && <div className="active-indicator" />}
+            <span className="eventcategory-name">{cat.name}</span>
+            {activeCategory === cat.id && <div className="eventcategory-indicator" />}
           </Link>
         ))}
       </nav>
