@@ -12,8 +12,9 @@ import {
 import { TextAnimate } from "@/src/components/ui/text-animate";
 
 import mentorsData from "./Mentors";
-import leadsData from "./TeamLead"; 
+import leadsData from "./TeamLead";
 import coreData from "./CoreTeam";
+import { Spinner } from "@/src/components/ui/spinner";
 
 type Category = "Mentors" | "Team Leads" | "Core Team";
 
@@ -22,7 +23,7 @@ interface TeamMember {
   name: string;
   role: string;
   category: string;
-  image: string | any; 
+  image: string | any;
   quote: string;
   socials: {
     instagram?: string;
@@ -50,9 +51,11 @@ const getImageSrc = (image: string | any) => {
 };
 
 export default function Team() {
+  const [isLoading, setIsLoading] = useState(true);
   const [api, setApi] = useState<any>(null);
   const [activeCategory, setActiveCategory] = useState<Category>("Team Leads");
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
+
 
   const categoryDataMap: Record<Category, TeamMember[]> = {
     "Mentors": mentorsData as unknown as TeamMember[],
@@ -61,30 +64,45 @@ export default function Team() {
   };
 
   const filteredMembers = categoryDataMap[activeCategory] || [];
-
-  // UPDATED useEffect to handle random selection for Core Team
   useEffect(() => {
     if (filteredMembers.length > 0) {
       if (activeCategory === "Core Team") {
-        // Find Shourya (ID 1) and Ansh (ID 26)
         const candidates = filteredMembers.filter(m => m.id === 1 || m.id === 26);
-        
+
         if (candidates.length > 0) {
-          // Randomly pick one of them
           const randomMember = candidates[Math.floor(Math.random() * candidates.length)];
           setSelectedMember(randomMember);
         } else {
-          // Fallback if neither found
           setSelectedMember(filteredMembers[0]);
         }
       } else {
-        // Default behavior for Mentors and Team Leads (First person)
         setSelectedMember(filteredMembers[0]);
       }
     } else {
       setSelectedMember(null);
     }
   }, [activeCategory]);
+  useEffect(() => {
+    let loaded = 0;
+    const images = filteredMembers.map(m => getImageSrc(m.image));
+
+    if (images.length === 0) {
+      setIsLoading(false);
+      return;
+    }
+
+    images.forEach(src => {
+      const img = new Image();
+      img.src = src;
+      img.onload = img.onerror = () => {
+        loaded++;
+        if (loaded === images.length) {
+          setIsLoading(false);
+        }
+      };
+    });
+  }, [filteredMembers]);
+
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -107,12 +125,20 @@ export default function Team() {
     }
   }, [activeCategory, api, selectedMember]);
 
+  if (isLoading) {
+    return (
+      <div className="team-loader">
+        <Spinner className="size-8 text-white" />
+        <p>Loading team...</p>
+      </div>
+    );
+  }
+
   return (
     <div className="team-container">
       <div className="text-center mb-8">
         <h1 style={{ fontSize: '1.5rem', color: '#fff', fontWeight: 600 }}></h1>
-        <p style={{ color: '#a1a1a1', fontSize: '1rem', marginTop: '0.5rem' }}>
-        </p>
+        <p style={{ color: '#a1a1a1', fontSize: '1rem', marginTop: '0.5rem' }}></p>
       </div>
 
       {selectedMember && (
@@ -125,33 +151,44 @@ export default function Team() {
           </div>
 
           <div className="profile-info">
-            <h2 className="profile-title"> Hi, my name is <br />
-              <span className="highlight-name">
-                {selectedMember.name}
-              </span>
+            <h2 className="profile-title">
+              Hi, my name is <br />
+              <span className="highlight-name">{selectedMember.name}</span>
             </h2>
 
             <p className="profile-quote">
-              
-                {selectedMember.quote}
+              {selectedMember.quote}
             </p>
 
             <div className="social-links">
               {selectedMember.socials.instagram && (
-                <a href={selectedMember.socials.instagram} target="_blank" className="social-item">
+                <a
+                  href={selectedMember.socials.instagram}
+                  target="_blank"
+                  className="social-item"
+                >
                   <Instagram size={24} />
                   <span>{extractInstagramUsername(selectedMember.socials.instagram)}</span>
                 </a>
               )}
 
               {selectedMember.socials.linkedin && (
-                <a href={`${selectedMember.socials.linkedin}`} target="_blank" className="social-item">
+                <a
+                  href={selectedMember.socials.linkedin}
+                  target="_blank"
+                  className="social-item"
+                >
                   <Linkedin size={24} />
                   <span>{selectedMember.name}</span>
                 </a>
               )}
+
               {selectedMember.socials.github && (
-                <a href={selectedMember.socials.github} target="_blank" className="social-item">
+                <a
+                  href={selectedMember.socials.github}
+                  target="_blank"
+                  className="social-item"
+                >
                   <Github size={24} />
                   <span>{extractGithubUsername(selectedMember.socials.github)}</span>
                 </a>
@@ -186,15 +223,20 @@ export default function Team() {
           }}
           className="w-full team-carousel"
         >
-
           <CarouselContent className="-ml-2 py-10">
             {filteredMembers.map((member) => (
-              <CarouselItem key={member.id} className="pl-1 basis-1/5 md:basis-1/9 lg:basis-1/12 flex justify-center items-center ">
+              <CarouselItem
+                key={member.id}
+                className="pl-1 basis-1/5 md:basis-1/9 lg:basis-1/12 flex justify-center items-center"
+              >
                 <div
-                  className={`carousel-avatar-btn ${selectedMember?.id === member.id ? 'selected' : ''}`}
+                  className={`carousel-avatar-btn ${selectedMember?.id === member.id ? "selected" : ""
+                    }`}
                   onClick={() => {
                     setSelectedMember(member);
-                    const index = filteredMembers.findIndex(m => m.id === member.id);
+                    const index = filteredMembers.findIndex(
+                      (m) => m.id === member.id
+                    );
                     api?.scrollTo(index);
                   }}
                 >
@@ -203,14 +245,11 @@ export default function Team() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious
-            className="custom-carousel-btn flex -left-12"
-          />
-          <CarouselNext
-            className="custom-carousel-btn flex -right-12"
-          />
+
+          <CarouselPrevious className="custom-carousel-btn flex -left-12" />
+          <CarouselNext className="custom-carousel-btn flex -right-12" />
         </Carousel>
       </div>
     </div>
-  );
+  )
 }

@@ -11,7 +11,7 @@
 }
 
 .active-profile-card {
-  background: rgba(26, 26, 26,0.3); 
+  background: rgba(26, 26, 26, 0.3);
   border-radius: 20px;
   padding: 3rem 4rem;
   width: 100%;
@@ -29,7 +29,9 @@
 }
 
 @keyframes fadeIn {
-  to { opacity: 1; }
+  to {
+    opacity: 1;
+  }
 }
 
 .profile-image-container {
@@ -90,7 +92,7 @@
 
 .profile-quote {
   font-size: 1rem;
-  color: #a1a1a1; 
+  color: #a1a1a1;
   margin-bottom: 2rem;
   font-weight: 400;
 }
@@ -164,7 +166,7 @@
   width: 100%;
   max-width: 1100px;
   position: relative;
-  padding: 0 4rem; 
+  padding: 0 4rem;
 }
 
 .carousel-avatar-btn {
@@ -178,7 +180,7 @@
   filter: grayscale(100%);
   opacity: 0.6;
   position: relative;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 .carousel-avatar-btn.selected,
@@ -188,21 +190,21 @@
   filter: grayscale(0%);
   opacity: 1;
   z-index: 10;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .carousel-avatar-btn img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block; 
+  display: block;
 }
 
 .team-carousel .overflow-hidden {
-  padding-top: 1.5rem;   
-  padding-bottom: 1.5rem; 
-  margin-top: -1.5rem;    
-  margin-bottom: -1.5rem; 
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-top: -1.5rem;
+  margin-bottom: -1.5rem;
 }
 
 @media (max-width: 768px) {
@@ -212,38 +214,38 @@
     text-align: center;
     gap: 2rem;
   }
-  
+
   .profile-info {
     text-align: center;
   }
-  
+
   .social-links {
     justify-content: center;
   }
 
   .carousel-avatar-btn {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 2px solid transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  filter: grayscale(100%);
-  opacity: 0.6;
-  position: relative;
-  box-sizing: border-box; 
-}
-
-  .carousel-avatar-btn.selected{
-  transform: scale(1.2);
-  border-color: #fff;
-  filter: grayscale(0%);
-  opacity: 1;
-  z-index: 10;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    position: relative;
+    box-sizing: border-box;
   }
-  
+
+  .carousel-avatar-btn.selected {
+    transform: scale(1.2);
+    border-color: #fff;
+    filter: grayscale(0%);
+    opacity: 1;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  }
+
   .category-nav {
     margin-top: 1rem;
     gap: 1.5rem;
@@ -256,40 +258,52 @@
     margin-top: -0.75rem;
     padding: 0 3rem;
   }
-  
+
   .carousel-avatar-btn {
     width: 50px;
     height: 50px;
   }
 }
 
+.team-loader {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  color: #ccc;
+  font-size: 1rem;
+}
+
+
 .custom-carousel-btn {
-  background-color: rgba(39, 39, 42, 0.6) !important; 
-  backdrop-filter: blur(4px) !important; 
+  background-color: rgba(39, 39, 42, 0.6) !important;
+  backdrop-filter: blur(4px) !important;
   margin-left: -5rem;
-  border: 1px solid rgba(255, 255, 255, 0.15) !important; 
-  
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+
   color: rgba(255, 255, 255, 0.7) !important;
-  
+
   width: 3rem !important;
-  height: 3rem !important; 
+  height: 3rem !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  border-radius: 50% !important; 
-  
+  border-radius: 50% !important;
+
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-  
+
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
 }
 
 .custom-carousel-btn:hover {
-  background-color: #27272a !important; 
+  background-color: #27272a !important;
 
-  border-color: rgba(255, 255, 255, 0.5) !important; 
-  
+  border-color: rgba(255, 255, 255, 0.5) !important;
+
   color: white !important;
-  
+
   transform: scale(1.15);
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.1), 0 4px 12px rgba(0, 0, 0, 0.8) !important;
 }
@@ -305,36 +319,36 @@
   width: 100%;
   max-width: 1200px;
   margin: 1rem auto;
-  padding: 4rem 1rem; 
+  padding: 4rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
   .team-container {
-    padding: 6rem 1rem 2rem 1rem; 
+    padding: 5rem 1rem 2rem 1rem;
   }
 
   .active-profile-card {
     display: flex;
     flex-direction: column;
-    padding: 2rem 1rem; 
+    padding: 2rem 1rem;
     text-align: center;
     gap: 1.5rem;
     width: 100%;
-    max-width: 100%; 
-    box-sizing: border-box; 
-    margin: 0; 
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
 
     height: auto;
     min-height: auto;
   }
 
   .profile-image-container {
-    width: 180px; 
+    width: 180px;
     height: 180px;
     margin: 0 auto;
   }
@@ -342,7 +356,7 @@
   .profile-title {
     font-size: 1.75rem;
     line-height: 1.2;
-    word-wrap: break-word; 
+    word-wrap: break-word;
   }
 
   .social-links {
@@ -350,10 +364,10 @@
     gap: 0.75rem;
     width: 100%;
   }
-  
+
   .carousel-container {
     width: 100%;
-    padding: 0; 
-    
+    padding: 0;
+
   }
 }
