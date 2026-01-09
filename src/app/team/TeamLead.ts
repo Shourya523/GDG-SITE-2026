@@ -1,12 +1,12 @@
-// 1. Import the images at the top
 import krrishImg from "./teamImages/TeamLead/IMG_0488 - Krrish Sehgal.webp";
 import aadhyaImg from "./teamImages/TeamLead/aadhya gupta - Aadhya Gupta.webp";
 import rohanImg from "./teamImages/TeamLead/323A0716 - Rohan Gupta.webp";
 import devanshiImg from "./teamImages/TeamLead/1000235939 - Devanshi Srivastava.webp";
 import ananyaImg from "./teamImages/TeamLead/Ananya Goel_Social media - Ananya Goel.webp";
 import armanImg from "./teamImages/TeamLead/Arman Gupta - Arman Gupta.webp";
+import vaibhavImg from "./teamImages/TeamLead/vaibhav.png";
+import himanshuImg from "./teamImages/TeamLead/Himanshu.png";
 
-// 2. Assign the imported variables to the "image" property
 const teamData = [
   {
     "id": 1,
@@ -90,6 +90,34 @@ const teamData = [
       "linkedin": "https://www.linkedin.com/in/arman-gupta-a3ba94281/",
       "instagram": "https://www.instagram.com/arman_gupta_08/",
       "discord": "https://discord.com/users/armangupta11"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Vaibhav Katariya",
+    "role": "Tech Lead",
+    "category": "Team Leads",
+    "image": vaibhavImg,
+    "quote": "Trust me, I'm a software engineer ^_^",
+    "socials": {
+      "github": "https://github.com/VaibhavKatariya",
+      "linkedin": "https://www.linkedin.com/in/vaibhavkatariyaa",
+      "instagram": "https://www.instagram.com/acevaibhav/",
+      "discord": "https://discord.com/users/vaibhavkatariyaa"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Himanshu Singh",
+    "role": "Web Dev Lead",
+    "category": "Team Leads",
+    "image": himanshuImg,
+    "quote": "Always building, always learning...",
+    "socials": {
+      "github": "https://github.com/Himaanshuuuu04",
+      "linkedin": "https://www.linkedin.com/in/himaansh-uu/",
+      "instagram": "https://www.instagram.com/himaansh_uu/",
+      "discord": "https://discord.com/users/impressridible"
     }
   }
 ];
