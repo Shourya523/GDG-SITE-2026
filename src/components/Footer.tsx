@@ -1,15 +1,18 @@
+"use client"
 import React from 'react';
 import './Footer.css';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const Footer: React.FC = () => {
+  const router=useRouter()
   return (
     <footer className="footer-wrapper">
       <div className="footer-cta">
         <div className="cta-content">
           <h2>Ready to join our community?</h2>
           <p>Connect with fellow developers, learn new skills, and build amazing projects together.</p>
-          <button className="cta-button">Become a Member</button>
+          <button className="cta-button" onClick={()=>router.push("/registration-form")}>Become a Member</button>
         </div>
         {/* Ambient Glows behind the card */}
         <div className="cta-glow glow-blue"></div>

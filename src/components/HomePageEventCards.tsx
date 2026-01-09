@@ -11,7 +11,7 @@ export default function HomePageEventCards({
   variant = "",
 }: Props) {
   return (
-    <div className={`event-card ${variant}`}>
+    <div className={`homepage-event-card ${variant}`}>
       <h3>{heading}</h3>
       <p>{description}</p>
     </div>

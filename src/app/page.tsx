@@ -182,7 +182,7 @@ export default function HomePage() {
         <span className="section-label">Our Programs</span>
         <h2 className="hero-title" style={{ fontSize: "3rem" }}>Events</h2>
 
-        <div className="events-grid">
+        <div className="homepage-events-grid">
           <HomePageEventCards
             heading="Hackathons"
             description="The idea of conducting hackathons is to make students code collaboratively from scratch to end with a working prototype."

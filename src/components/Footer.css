@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+  padding-left: .25rem ;
+}
 .footer-wrapper {
   width: 100%;
   display: flex;
