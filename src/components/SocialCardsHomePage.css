@@ -1,6 +1,7 @@
 .social-stats-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 2.5rem;
   margin-top: 6rem; 
   padding: 1.2rem;
@@ -11,6 +12,7 @@
 }
 
 .social-item-link {
+  justify-content: center;
   display: flex;
   align-items: center;
   gap: 0.8rem;

@@ -22,7 +22,7 @@ interface TeamMember {
   id: number;
   name: string;
   role: string;
-  category: string; 
+  category: string;
   image: string;
   quote: string;
   socials: {
@@ -32,6 +32,18 @@ interface TeamMember {
     discord?: string;
   };
 }
+function extractInstagramUsername(url: string): string {
+  const regex = /instagram\.com\/([^/?]+)/i;
+  const match = url.match(regex);
+  return match ? match[1] : url;
+}
+
+function extractGithubUsername(url: string): string {
+  const regex = /github\.com\/([^/?]+)/i;
+  const match = url.match(regex);
+  return match ? match[1] : url;
+}
+
 
 export default function Team() {
   const [activeCategory, setActiveCategory] = useState<Category>("Team Leads");
@@ -71,7 +83,7 @@ export default function Team() {
         <p style={{ color: '#a1a1a1', fontSize: '1rem', marginTop: '0.5rem' }}>
         </p>
       </div>
-      
+
       {selectedMember && (
         <div className="active-profile-card">
           <div className="profile-image-container">
@@ -104,25 +116,27 @@ export default function Team() {
 
             <div className="social-links">
               {selectedMember.socials.instagram && (
-                <a href={`https://instagram.com/${selectedMember.socials.instagram}`} target="_blank" className="social-item">
+                <a href={selectedMember.socials.instagram} target="_blank" className="social-item">
                   <Instagram size={24} />
-                  <span>{selectedMember.socials.instagram}</span>
+                  <span>{extractInstagramUsername(selectedMember.socials.instagram)}</span>
                 </a>
               )}
+
               {selectedMember.socials.linkedin && (
-                <a href={`https://linkedin.com/in/${selectedMember.socials.linkedin}`} target="_blank" className="social-item">
+                <a href={`${selectedMember.socials.linkedin}`} target="_blank" className="social-item">
                   <Linkedin size={24} />
                   <span>{selectedMember.name}</span>
                 </a>
               )}
               {selectedMember.socials.github && (
-                <a href={`https://github.com/${selectedMember.socials.github}`} target="_blank" className="social-item">
+                <a href={selectedMember.socials.github} target="_blank" className="social-item">
                   <Github size={24} />
-                  <span>{selectedMember.socials.github}</span>
+                  <span>{extractGithubUsername(selectedMember.socials.github)}</span>
                 </a>
               )}
+
               {selectedMember.socials.discord && (
-                <a href="#" className="social-item">
+                <a href={`${selectedMember.socials.discord}`} className="social-item">
                   <MessageSquare size={24} />
                   <span>{selectedMember.socials.discord}</span>
                 </a>
@@ -153,9 +167,9 @@ export default function Team() {
           }}
           className="w-full team-carousel"
         >
-          <CarouselContent className="-ml-2">
+          <CarouselContent className="-ml-2 py-10">
             {filteredMembers.map((member) => (
-              <CarouselItem key={member.id} className="pl-1 basis-1/5 md:basis-1/9 lg:basis-1/12 flex justify-center items-center">
+              <CarouselItem key={member.id} className="pl-1 basis-1/5 md:basis-1/9 lg:basis-1/12 flex justify-center items-center ">
                 <div
                   className={`carousel-avatar-btn ${selectedMember?.id === member.id ? 'selected' : ''}`}
                   onClick={() => setSelectedMember(member)}

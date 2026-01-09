@@ -1,123 +1,86 @@
 [
   {
-    "id": 11,
-    "name": "Jinendra Jain",
-    "role": "GDG Organizer",
+    "id": 1,
+    "name": "Krrish Sehgal",
+    "role": "Tech Coordinator",
     "category": "Team Leads",
-    "image": "https://github.com/shadcn.png",
-    "quote": "Code is like humor. If you have to explain it, it's bad.",
+    "image": "https://drive.google.com/open?id=1xL1e5RAoazKkcdsTkfEWjlEkd4qhZ13P",
+    "quote": "\u201cOnes and Zeroes, never disappoint\u201d",
     "socials": {
-      "instagram": "hattori.03",
-      "linkedin": "jinendra-jain",
-      "github": "jjinendra3",
-      "discord": "jim_k_schrute"
+      "github": "https://github.com/krrish-sehgal",
+      "linkedin": "https://www.linkedin.com/in/krrish-sehgal-5a268b24b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      "instagram": "@krrish__sehgal",
+      "discord": "@krrish__sehgal"
     }
   },
   {
-    "id": 12,
-    "name": "Aditya Singh",
-    "role": "Tech Lead",
+    "id": 2,
+    "name": "Aadhya Gupta",
+    "role": "Management & PR",
     "category": "Team Leads",
-    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Aditya&backgroundColor=b6e3f4,c0aede,d1d4f9",
-    "quote": "Talk is cheap. Show me the code.",
+    "image": "https://drive.google.com/open?id=15TpzYiwfpWUyLGbexrM479DZyHhpNOJ1",
+    "quote": "The secret to good management? Coffee, patience, and the ability to smile through chaos.",
     "socials": {
-      "linkedin": "aditya-singh",
-      "github": "aditya"
+      "github": "https://github.com/aadhya04",
+      "linkedin": "https://www.linkedin.com/in/aadhyag-gupta/",
+      "instagram": "",
+      "discord": ""
     }
   },
   {
-    "id": 13,
-    "name": "Sarah Connor",
-    "role": "Event Lead",
+    "id": 3,
+    "name": "Rohan Gupta",
+    "role": "ML Lead",
     "category": "Team Leads",
-    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah&backgroundColor=b6e3f4,c0aede,d1d4f9",
-    "quote": "The future is what we make it.",
+    "image": "https://drive.google.com/open?id=1DgvFLNLJmHn871zrky_ksTTx3wlFLTMC",
+    "quote": "\u201cTurning data into decisions, and ideas into intelligence.\u201d",
     "socials": {
-      "instagram": "sarah_c",
-      "linkedin": "sarah-events"
+      "github": "https://github.com/Rohannnn26",
+      "linkedin": "https://www.linkedin.com/in/rohan-gupta-457a72207/",
+      "instagram": "https://www.instagram.com/rohannnn.26/",
+      "discord": ""
     }
   },
   {
-    "id": 14,
-    "name": "Michael Scott",
-    "role": "Community Lead",
+    "id": 4,
+    "name": "Devanshi Srivastava",
+    "role": "UI/UX Lead",
     "category": "Team Leads",
-    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Michael&backgroundColor=b6e3f4,c0aede,d1d4f9",
-    "quote": "I want people to be afraid of how much they love me.",
+    "image": "https://drive.google.com/open?id=1JHho1zZcMe4VVy_S4T2aLcUhT2WD8Bzd",
+    "quote": "let\u2019s talk design",
     "socials": {
-      "linkedin": "michael-scott-paper",
-      "instagram": "greatest_boss"
+      "github": "https://github.com/Day-waah",
+      "linkedin": "https://www.linkedin.com/in/devanshi-srivastava-4352a6281",
+      "instagram": "",
+      "discord": ""
     }
   },
   {
-    "id": 15,
-    "name": "Pam Beesly",
-    "role": "Design Lead",
-    "category": "Team Leads",
-    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Pam&backgroundColor=b6e3f4,c0aede,d1d4f9",
-    "quote": "There’s a lot of beauty in ordinary things.",
-    "socials": {
-      "instagram": "pam_art",
-      "linkedin": "pam-beesly"
-    }
-  },
-  {
-    "id": 16,
-    "name": "Jim Halpert",
-    "role": "Outreach Lead",
-    "category": "Team Leads",
-    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Jim&backgroundColor=b6e3f4,c0aede,d1d4f9",
-    "quote": "Bears. Beets. Battlestar Galactica.",
-    "socials": {
-      "linkedin": "jim-sales",
-      "discord": "big_tuna"
-    }
-  },
-  {
-    "id": 17,
-    "name": "Dwight Schrute",
-    "role": "Logistics Lead",
-    "category": "Team Leads",
-    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Dwight&backgroundColor=b6e3f4,c0aede,d1d4f9",
-    "quote": "False. I am the best lead.",
-    "socials": {
-      "discord": "dwight_shrute",
-      "linkedin": "assistant-regional-mgr"
-    }
-  },
-  {
-    "id": 18,
-    "name": "Ryan Howard",
-    "role": "Innovation Lead",
-    "category": "Team Leads",
-    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Ryan&backgroundColor=b6e3f4,c0aede,d1d4f9",
-    "quote": "I’m the wonder kid.",
-    "socials": {
-      "github": "ryan_temp",
-      "linkedin": "wuphf-founder"
-    }
-  },
-  {
-    "id": 19,
-    "name": "Kelly Kapoor",
+    "id": 5,
+    "name": "Ananya Goel",
     "role": "Social Media Lead",
     "category": "Team Leads",
-    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Kelly&backgroundColor=b6e3f4,c0aede,d1d4f9",
-    "quote": "Who says exactly what they’re thinking?",
+    "image": "https://drive.google.com/open?id=1jk6b-AZVDXt09RCj1m-THYdOcJUX-1oN",
+    "quote": "Clarity over complexity",
     "socials": {
-      "instagram": "kelly_biz",
-      "linkedin": "kelly-customer-svc"
+      "github": "https://github.com/Ananyag19",
+      "linkedin": "https://www.linkedin.com/in/ananya-goel-a454a02a4/",
+      "instagram": "https://www.instagram.com/ananyag._19/",
+      "discord": "https://discord.com/users/ananya06873"
     }
   },
   {
-    "id": 20,
-    "name": "Angela Martin",
-    "role": "Finance Lead",
+    "id": 6,
+    "name": "Arman Gupta",
+    "role": "Management & PR",
     "category": "Team Leads",
-    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Angela&backgroundColor=b6e3f4,c0aede,d1d4f9",
-    "quote": "I don't suffer fools correctly.",
+    "image": "https://drive.google.com/open?id=1U5HEbxO0SaIJ8iyWO1eI8nX954yhMoif",
+    "quote": "Code, Create, Conquer \u2013 because every great innovation starts with a single line.",
     "socials": {
-      "linkedin": "angela-acct"
+      "github": "https://github.com/armangupta18",
+      "linkedin": "https://www.linkedin.com/in/arman-gupta-a3ba94281/",
+      "instagram": "https://www.instagram.com/arman_gupta_08/",
+      "discord": "https://discord.com/users/armangupta11"
     }
   }
 ]

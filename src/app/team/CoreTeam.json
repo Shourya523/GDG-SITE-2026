@@ -1,122 +1,367 @@
 [
   {
-    "id": 21,
-    "name": "Rohan Gupta",
-    "role": "Management Lead",
+    "id": 1,
+    "name": "Shourya Singh",
+    "role": "Core Team",
     "category": "Core Team",
-    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Rohan&backgroundColor=b6e3f4,c0aede,d1d4f9",
-    "quote": "Management is doing things right.",
+    "image": "https://drive.google.com/open?id=1MF0Bpw9x6S4V7_4j2ogx9ic1d0msqsHo",
+    "quote": "Professional github account stalker",
     "socials": {
-      "instagram": "rohan_g",
-      "linkedin": "rohan-gupta"
+      "github": "https://github.com/Shourya523",
+      "linkedin": "https://www.linkedin.com/in/shourya-singh-297297358",
+      "instagram": "https://www.instagram.com/shour.ya_124?igsh=ZDc4Y2FuamU5dHlw",
+      "discord": "https://discord.com/users/shourya9457"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Harshdeep singh",
+    "role": "Core Team",
+    "category": "Core Team",
+    "image": "https://drive.google.com/open?id=1rk4Lhxv1kRpzYbsK-OKZ-_JplSy2Ft7U",
+    "quote": "Turning ideas into interactive experiences through design and development.",
+    "socials": {
+      "github": "https://github.com/harsh22255",
+      "linkedin": "linkedin.com/in/harshdeepsingh270506",
+      "instagram": "https://www.instagram.com/harshdeep_151?igsh=NXpuMHdua3g0OW53",
+      "discord": "https://discord.com/users/harshdeep1364"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Anant Goel",
+    "role": "Core Team",
+    "category": "Core Team",
+    "image": "https://drive.google.com/open?id=1cFsxyPXoMNL8YZft5CUTyLg2157uCmMQ",
+    "quote": "I disguise bugs as features",
+    "socials": {
+      "github": "https://github.com/subwaysurface123?tab=overview&from=2025-12-01&to=2025-12-31",
+      "linkedin": "https://www.linkedin.com/in/anant-goel-599a94371?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      "instagram": "https://www.instagram.com/_anantgoel_?igsh=bTJmcHZmYm9xZXVn",
+      "discord": ""
+    }
+  },
+  {
+    "id": 4,
+    "name": "Aryan Varshney",
+    "role": "Core Team",
+    "category": "Core Team",
+    "image": "https://drive.google.com/open?id=1VEptAV5dvDxJYHyvVg_U1CB9NygaV4BP",
+    "quote": "Apne liye jiya to kya jiya, kabhi desh ke liye ji kar to dekho \ud83c\uddee\ud83c\uddf3",
+    "socials": {
+      "github": "https://github.com/AryanV-Coder",
+      "linkedin": "https://www.linkedin.com/in/aryan-varshney-392446310/",
+      "instagram": "https://www.instagram.com/aryan_v.cricks/",
+      "discord": ""
+    }
+  },
+  {
+    "id": 5,
+    "name": "Parv Garg",
+    "role": "Core Team",
+    "category": "Core Team",
+    "image": "https://drive.google.com/open?id=1qNWQq2viaZvnB1VW3jhW41Gg-R9T9KbH",
+    "quote": "A Change in life will not always be the Best, but a try to take a Chance for a Better life will be never a Loss in our Life. - Jan Jensen",
+    "socials": {
+      "github": "https://github.com/parvgarg05",
+      "linkedin": "https://www.linkedin.com/in/parvgarg23",
+      "instagram": "https://www.instagram.com/parv.gargg/",
+      "discord": ""
+    }
+  },
+  {
+    "id": 6,
+    "name": "Shreyash Trivedi",
+    "role": "Core Team",
+    "category": "Core Team",
+    "image": "https://drive.google.com/open?id=1UxMmlQw3of8QkOTk8g4Nlc-T6Fxn9j-a",
+    "quote": "I build what I wish to see in the world",
+    "socials": {
+      "github": "https://github.com/Wacko13",
+      "linkedin": "https://www.linkedin.com/in/shreyash-trivedi-45887034a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      "instagram": "",
+      "discord": ""
+    }
+  },
+  {
+    "id": 7,
+    "name": "Vedansh Dwivedi",
+    "role": "Core Team",
+    "category": "Core Team",
+    "image": "https://drive.google.com/open?id=1YzheDwOhB2yBveV8VfYjWJLAC2afPh0v",
+    "quote": "Dreams can become a reality. You just have to keep chasing them",
+    "socials": {
+      "github": "https://github.com/Vedansh-Dwivedi",
+      "linkedin": "www.linkedin.com/in/vedansh-dwivedi-793298369",
+      "instagram": "",
+      "discord": ""
+    }
+  },
+  {
+    "id": 8,
+    "name": "Anushka",
+    "role": "Core Team",
+    "category": "Core Team",
+    "image": "https://drive.google.com/open?id=15HOPE4BqcFJx5pYUZ3c_UVQLmWkHpZeg",
+    "quote": "Believe in your flyness, conquer your shyness. \u2014 Kanye West",
+    "socials": {
+      "github": "https://github.com/Anushka-XD",
+      "linkedin": "https://www.linkedin.com/in/anushka-aggarwal-80b31836a/",
+      "instagram": "https://www.instagram.com/__anushkaa54/",
+      "discord": "https://discord.com/users/1329107081827057786"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Shriya Singh",
+    "role": "Core Team",
+    "category": "Core Team",
+    "image": "https://drive.google.com/open?id=1YNY3Z4JwcS4e_orOR4a1J0hYwfWHglo6",
+    "quote": "Turning complex flows into simple experiences.",
+    "socials": {
+      "github": "https://github.com/shriyasingh-dot",
+      "linkedin": "https://www.linkedin.com/in/shriya-singh-297837312/",
+      "instagram": "https://www.instagram.com/delulusisi/",
+      "discord": "https://discord.com/users/921631649756766238"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Naysha Dwivedi",
+    "role": "Core Team",
+    "category": "Core Team",
+    "image": "https://drive.google.com/open?id=1GpgQguFj-NpODvhS0DTqF_A2wxIaqnBM",
+    "quote": "I make things work eventually",
+    "socials": {
+      "github": "https://github.com/lozakk",
+      "linkedin": "https://www.linkedin.com/in/naysha-dwivedi-b6a464364/",
+      "instagram": "https://www.instagram.com/naysshhaaa._?igsh=MTB3NHlkaGxsajFuZQ%3D%3D&utm_source=qr",
+      "discord": ""
+    }
+  },
+  
+  {
+    "id": 11,
+    "name": "Anahita",
+    "role": "Core Team",
+    "category": "Core Team",
+    "image": "https://drive.google.com/open?id=1Lykjq4dCLl8612oVLNgmlS2bP0YTGe95",
+    "quote": "\u201cBuilding skills and creating impact through technology.\u201d",
+    "socials": {
+      "github": "https://github.com/Anahita0706",
+      "linkedin": "https://www.linkedin.com/in/anahita-46560231b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      "instagram": "https://www.instagram.com/anahita_0706?igsh=bzgwdXBqOGQ4a3Zh&utm_source=qr",
+      "discord": "https://discord.gg/ER6Z7KNk"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Arushi",
+    "role": "Core Team",
+    "category": "Core Team",
+    "image": "https://drive.google.com/open?id=1W_7whrcCkZvLWnmO2lq0i46R-YpjN3i2",
+    "quote": "Motivated to learn and contribute",
+    "socials": {
+      "github": "https://github.com/arushibhutani2007-sudo",
+      "linkedin": "https://www.linkedin.com/in/arushi-bhutani-5a642937a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      "instagram": "https://www.instagram.com/bhu_aru07?igsh=YWgwcDhiajhlYzNm",
+      "discord": "https://discord.gg/YJb7uAaY"
+    }
+  },
+  {
+    "id": 13,
+    "name": "Isha Bhargava",
+    "role": "Core Team",
+    "category": "Core Team",
+    "image": "https://drive.google.com/open?id=1KuWwWdQgzn6UeQe-0JqNTXJqrcJ9bocz",
+    "quote": "Small steps, meaningful progress.",
+    "socials": {
+      "github": "https://github.com/ishaabhargava",
+      "linkedin": "https://www.linkedin.com/in/isha-bhargava-a4562032a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      "instagram": "https://www.instagram.com/ishaabhargava?igsh=MW0waXI0dnRzbmFzZg==",
+      "discord": ""
+    }
+  },
+  {
+    "id": 14,
+    "name": "Archi Singhal",
+    "role": "Core Team",
+    "category": "Core Team",
+    "image": "https://drive.google.com/open?id=1gyOQ9jDCaRZZfPcdmx_8tMOS-0HdjCWC",
+    "quote": "Creating conversations around code.",
+    "socials": {
+      "github": "https://github.com/archi-s1",
+      "linkedin": "https://www.linkedin.com/in/archi-singhal-966485311",
+      "instagram": "",
+      "discord": "https://discord.com/users/1321924185970311303"
+    }
+  },
+  {
+    "id": 15,
+    "name": "Anmol Bhatnagar",
+    "role": "Core Team",
+    "category": "Core Team",
+    "image": "https://drive.google.com/open?id=1bkSZUsyaSoBc87d01nT9tW-8Mg-4joFu",
+    "quote": "Think. Code. Impact.",
+    "socials": {
+      "github": "https://github.com/Anmol-OS",
+      "linkedin": "https://www.linkedin.com/in/anmol-bhatnagar03",
+      "instagram": "https://www.instagram.com/anmolb_0308",
+      "discord": "https://discord.com/users/714406790690766869"
+    }
+  },
+  {
+    "id": 16,
+    "name": "Vanisha Sharma",
+    "role": "Core Team",
+    "category": "Core Team",
+    "image": "https://drive.google.com/open?id=1fVGXxSOZJRFXYkK3A8CKNEpAN2HotFo6",
+    "quote": "To \u267e\ufe0f and beyond \ud83d\udcab",
+    "socials": {
+      "github": "https://github.com/Vanzzz26",
+      "linkedin": "https://www.linkedin.com/in/vanisha-sharma26",
+      "instagram": "",
+      "discord": ""
+    }
+  },
+  {
+    "id": 17,
+    "name": "Satyam \ud83d\udd31",
+    "role": "Core Team",
+    "category": "Core Team",
+    "image": "https://drive.google.com/open?id=1gFlWRd6xIGWv7vGtcK2-P_-hOMARDY6U",
+    "quote": "Always learning, always building",
+    "socials": {
+      "github": "",
+      "linkedin": "Follow me on LinkedIn: www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=satyam-pundhir-91b532209",
+      "instagram": "I'm on Instagram as @_satyyamm. Install the app to follow my photos and videos. https://www.instagram.com/_satyyamm?igsh=ZHl6dG5wdmQ4azgz&utm_source=ig_contact_invite",
+      "discord": ""
+    }
+  },
+  {
+    "id": 18,
+    "name": "SHIVAM SHISHODIA",
+    "role": "Core Team",
+    "category": "Core Team",
+    "image": "https://drive.google.com/open?id=1PabwY-D4izqThnPxKMteUMAMT0mqYuVj",
+    "quote": "I move in silence, let results speak",
+    "socials": {
+      "github": "https://github.com/ShivaayS20",
+      "linkedin": "https://www.linkedin.com/in/sipherex/",
+      "instagram": "",
+      "discord": ""
+    }
+  },
+  {
+    "id": 19,
+    "name": "Dhruvi Gupta",
+    "role": "Core Team",
+    "category": "Core Team",
+    "image": "https://drive.google.com/open?id=1cISlpE9DwVRwwz4fWlNgHELObr3DU2nQ",
+    "quote": "Imagining Thing and Making it Real...",
+    "socials": {
+      "github": "https://github.com/DG-Dhruvi",
+      "linkedin": "www.linkedin.com/in/dhruvi-gupta-31b66b320",
+      "instagram": "",
+      "discord": ""
+    }
+  },
+  {
+    "id": 20,
+    "name": "Revant Srivastava",
+    "role": "Core Team",
+    "category": "Core Team",
+    "image": "https://drive.google.com/open?id=1IP0hLu6RIYNAv_ftAlHhs8CCbdRgXsUZ",
+    "quote": "Good at delegating things i could do myself",
+    "socials": {
+      "github": "https://github.com/Revant-Srivastava",
+      "linkedin": "https://www.linkedin.com/in/revant-srivastava-424429303?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      "instagram": "https://www.instagram.com/revant_srivastava?igsh=N3E0dTljbzEwdjZ2",
+      "discord": ""
+    }
+  },
+  {
+    "id": 21,
+    "name": "Hitika Mathur",
+    "role": "Core Team",
+    "category": "Core Team",
+    "image": "https://drive.google.com/open?id=1RVxAnOM84cScGpl-DgfujNLIYefU-fPo",
+    "quote": "Crafting what\u2019s next",
+    "socials": {
+      "github": "https://github.com/hitikamathur",
+      "linkedin": "https://www.linkedin.com/in/hitika-mathur/",
+      "instagram": "",
+      "discord": ""
     }
   },
   {
     "id": 22,
-    "name": "Isha Patel",
-    "role": "Web Developer",
+    "name": "Abhinandan",
+    "role": "Core Team",
     "category": "Core Team",
-    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Isha&backgroundColor=b6e3f4,c0aede,d1d4f9",
-    "quote": "Eat. Sleep. Code. Repeat.",
+    "image": "https://drive.google.com/open?id=1x1SSe4zyhdghnRl20zmKGApdIrKT5-gI",
+    "quote": "\u201cGrowing one commit at a time.\u201d",
     "socials": {
-      "github": "isha_dev",
-      "linkedin": "isha-web"
+      "github": "https://github.com/abhii981",
+      "linkedin": "https://www.linkedin.com/in/abhinandan-93115b309/",
+      "instagram": "https://www.instagram.com/abhi_lalit/",
+      "discord": ""
     }
   },
   {
     "id": 23,
-    "name": "Rahul Kumar",
-    "role": "Content Writer",
+    "name": "Pratishtha Singh",
+    "role": "Core Team",
     "category": "Core Team",
-    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Rahul&backgroundColor=b6e3f4,c0aede,d1d4f9",
-    "quote": "Words have power.",
+    "image": "https://drive.google.com/open?id=1pFRSy6kokyiQk7tT-3H0JHtSZbTwR21M",
+    "quote": "Code, Coffee, Repeat",
     "socials": {
-      "linkedin": "rahul-writes",
-      "instagram": "rahul_poet"
+      "github": "https://github.com/Pratishtha5",
+      "linkedin": "https://www.linkedin.com/in/pratishtha-singh-534989322?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      "instagram": "",
+      "discord": ""
     }
   },
   {
     "id": 24,
-    "name": "Sneha Reddy",
-    "role": "Graphic Designer",
+    "name": "Tarushi Saxena",
+    "role": "Core Team",
     "category": "Core Team",
-    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sneha&backgroundColor=b6e3f4,c0aede,d1d4f9",
-    "quote": "Design is intelligence made visible.",
+    "image": "https://drive.google.com/open?id=1UEcFhpBooeGavd5_uuftFD6JwhxSakMv",
+    "quote": "Thinking in loops. Building at scale.",
     "socials": {
-      "instagram": "sneha_designs",
-      "linkedin": "sneha-ux"
+      "github": "https://github.com/Tarushi-Saxena",
+      "linkedin": "https://www.linkedin.com/in/tarushi-saxena-588698308?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      "instagram": "https://www.instagram.com/tarushieeee",
+      "discord": ""
     }
   },
   {
     "id": 25,
-    "name": "Vikram Malhotra",
-    "role": "Video Editor",
+    "name": "Dhruv Arora",
+    "role": "Core Team",
     "category": "Core Team",
-    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Vikram&backgroundColor=b6e3f4,c0aede,d1d4f9",
-    "quote": "Fix it in post.",
+    "image": "https://drive.google.com/open?id=1atYt7bw-4cggqMAn8545X6IVNX3setom",
+    "quote": "It's all just a God's Plan",
     "socials": {
-      "instagram": "vikram_edits",
-      "linkedin": "vikram-vfx"
+      "github": "https://github.com/DhruvArora0204",
+      "linkedin": "https://www.linkedin.com/in/dhruv-arora-35751a319?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      "instagram": "https://www.instagram.com/_dhruv_0204?igsh=MWF1dHB6MXQ0NG5idg==",
+      "discord": ""
     }
   },
   {
     "id": 26,
-    "name": "Pooja Hegde",
-    "role": "PR Coordinator",
+    "name": "Aman Gandotra",
+    "role": "Core Team",
     "category": "Core Team",
-    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Pooja&backgroundColor=b6e3f4,c0aede,d1d4f9",
-    "quote": "Building relationships matters.",
+    "image": "https://drive.google.com/open?id=1KTe7npU1Xh9GhWfapBau9mprb5i8eBcP",
+    "quote": "Quietly building something meaningful.",
     "socials": {
-      "linkedin": "pooja-pr",
-      "instagram": "pooja_connects"
-    }
-  },
-  {
-    "id": 27,
-    "name": "Arjun Rampal",
-    "role": "Logistics Member",
-    "category": "Core Team",
-    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Arjun&backgroundColor=b6e3f4,c0aede,d1d4f9",
-    "quote": "Execution is everything.",
-    "socials": {
-      "discord": "arjun_logs",
-      "linkedin": "arjun-ops"
-    }
-  },
-  {
-    "id": 28,
-    "name": "Nisha Singh",
-    "role": "App Developer",
-    "category": "Core Team",
-    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Nisha&backgroundColor=b6e3f4,c0aede,d1d4f9",
-    "quote": "There's an app for that.",
-    "socials": {
-      "github": "nisha_app",
-      "linkedin": "nisha-dev"
-    }
-  },
-  {
-    "id": 29,
-    "name": "Kabir Khan",
-    "role": "Sponsorship Member",
-    "category": "Core Team",
-    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Kabir&backgroundColor=b6e3f4,c0aede,d1d4f9",
-    "quote": "Show me the money.",
-    "socials": {
-      "linkedin": "kabir-corp",
-      "instagram": "kabir_biz"
-    }
-  },
-  {
-    "id": 30,
-    "name": "Zara Ali",
-    "role": "Volunteer",
-    "category": "Core Team",
-    "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Zara&backgroundColor=b6e3f4,c0aede,d1d4f9",
-    "quote": "Service to others is the rent you pay.",
-    "socials": {
-      "instagram": "zara_v",
-      "linkedin": "zara-vol"
+      "github": "Github.com/amangandotra",
+      "linkedin": "LinkedIn.com/in/amangandotra",
+      "instagram": "Aman_26_01",
+      "discord": ""
     }
   }
 ]
