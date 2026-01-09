@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import Link from 'next/link';
 
 const Footer: React.FC = () => {
   return (
@@ -33,10 +34,10 @@ const Footer: React.FC = () => {
           <div className="footer-column">
             <h3>Quick Links</h3>
             <ul className="footer-links">
-              <li><a href="#events">Events</a></li>
-              <li><a href="#team">Teams</a></li>
-              <li><a href="#bitbox">Bitbox</a></li>
-              <li><a href="#studyjam">StudyJam</a></li>
+              <li><Link href="/events">Events</Link></li>
+              <li><Link href="/team">Team</ Link></li>
+              <li><Link href="/bitbox">Bitbox</Link></li>
+              <li><Link href="/studyjam">StudyJam</Link></li>
             </ul>
           </div>
 
