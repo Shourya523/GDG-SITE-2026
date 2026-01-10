@@ -5,21 +5,21 @@ import devanshiImg from "./teamImages/TeamLead/1000235939 - Devanshi Srivastava.
 import ananyaImg from "./teamImages/TeamLead/Ananya Goel_Social media - Ananya Goel.webp";
 import armanImg from "./teamImages/TeamLead/Arman Gupta - Arman Gupta.webp";
 import vaibhavImg from "./teamImages/TeamLead/vaibhav.png";
-import himanshuImg from "./teamImages/TeamLead/Himanshu.png";
+import himanshuImg from "./teamImages/TeamLead/Himanshu.webp";
 
 const teamData = [
   {
     "id": 1,
-    "name": "Krrish Sehgal",
-    "role": "Tech Coordinator",
+    "name": "Vaibhav Katariya",
+    "role": "Tech Lead",
     "category": "Team Leads",
-    "image": krrishImg,
-    "quote": "\u201cOnes and Zeroes, never disappoint\u201d",
+    "image": vaibhavImg,
+    "quote": "Trust me, I'm a software engineer ^_^",
     "socials": {
-      "github": "https://github.com/krrish-sehgal",
-      "linkedin": "https://www.linkedin.com/in/krrish-sehgal-5a268b24b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-      "instagram": "@krrish__sehgal",
-      "discord": "@krrish__sehgal"
+      "github": "https://github.com/VaibhavKatariya",
+      "linkedin": "https://www.linkedin.com/in/vaibhavkatariyaa",
+      "instagram": "https://www.instagram.com/acevaibhav/",
+      "discord": "https://discord.com/users/vaibhavkatariyaa"
     }
   },
   {
@@ -80,6 +80,20 @@ const teamData = [
   },
   {
     "id": 6,
+    "name": "Krrish Sehgal",
+    "role": "Tech Coordinator",
+    "category": "Team Leads",
+    "image": krrishImg,
+    "quote": "\u201cOnes and Zeroes, never disappoint\u201d",
+    "socials": {
+      "github": "https://github.com/krrish-sehgal",
+      "linkedin": "https://www.linkedin.com/in/krrish-sehgal-5a268b24b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      "instagram": "@krrish__sehgal",
+      "discord": "@krrish__sehgal"
+    }
+  },
+  {
+    "id": 7,
     "name": "Arman Gupta",
     "role": "Management & PR",
     "category": "Team Leads",
@@ -92,20 +106,7 @@ const teamData = [
       "discord": "https://discord.com/users/armangupta11"
     }
   },
-  {
-    "id": 7,
-    "name": "Vaibhav Katariya",
-    "role": "Tech Lead",
-    "category": "Team Leads",
-    "image": vaibhavImg,
-    "quote": "Trust me, I'm a software engineer ^_^",
-    "socials": {
-      "github": "https://github.com/VaibhavKatariya",
-      "linkedin": "https://www.linkedin.com/in/vaibhavkatariyaa",
-      "instagram": "https://www.instagram.com/acevaibhav/",
-      "discord": "https://discord.com/users/vaibhavkatariyaa"
-    }
-  },
+  
   {
     "id": 8,
     "name": "Himanshu Singh",
