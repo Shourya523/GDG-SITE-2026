@@ -126,17 +126,17 @@ export default function HomePage() {
             View Events
           </a>
           <a
-            href="#"
+            href="/team"
             className="btn-secondary-demo-dashboard"
             style={{
               border: "1px solid var(--border)",
               padding: "0.8rem 2rem",
               borderRadius: "999px",
               color: "var(--text-primary)",
-              textDecoration: "none"
+              textDecoration: "none",
             }}
           >
-            Study Jams
+            Meet The Team
           </a>
         </div>
 
