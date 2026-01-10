@@ -254,7 +254,7 @@ const coreData = [
   },
   {
     "id": 17,
-    "name": "Satyam \ud83d\udd31",
+    "name": "Satyam",
     "role": "Core Team",
     "category": "Core Team",
     "image": satyamImg,
@@ -268,7 +268,7 @@ const coreData = [
   },
   {
     "id": 18,
-    "name": "SHIVAM SHISHODIA",
+    "name": "Shivam Shishodia",
     "role": "Core Team",
     "category": "Core Team",
     "image": shivamImg,

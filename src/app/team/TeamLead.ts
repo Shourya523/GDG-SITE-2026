@@ -25,7 +25,7 @@ const teamData = [
   {
     "id": 2,
     "name": "Aadhya Gupta",
-    "role": "Management & PR",
+    "role": "Management & PR Lead",
     "category": "Team Leads",
     "image": aadhyaImg,
     "quote": "The secret to good management? Coffee, patience, and the ability to smile through chaos.",
@@ -39,7 +39,7 @@ const teamData = [
   {
     "id": 3,
     "name": "Rohan Gupta",
-    "role": "ML Lead",
+    "role": "AI/ML Lead",
     "category": "Team Leads",
     "image": rohanImg,
     "quote": "\u201cTurning data into decisions, and ideas into intelligence.\u201d",
@@ -95,7 +95,7 @@ const teamData = [
   {
     "id": 7,
     "name": "Arman Gupta",
-    "role": "Management & PR",
+    "role": "Management & PR Lead",
     "category": "Team Leads",
     "image": armanImg,
     "quote": "Code, Create, Conquer \u2013 because every great innovation starts with a single line.",

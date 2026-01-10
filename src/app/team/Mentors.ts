@@ -12,7 +12,7 @@ const mentorsData = [
   {
     "id": 1,
     "name": "Samarpreet Singh",
-    "role": "Technical Coordinator",
+    "role": "Mentor",
     "category": "Mentors",
     "image": samarpreetImg, 
     "quote": "Crafting Digital Excellence, One Line of Code at a Time.",
@@ -26,7 +26,7 @@ const mentorsData = [
   {
     "id": 2,
     "name": "Sunpreet Singh",
-    "role": "Technical Lead",
+    "role": "Mentor",
     "category": "Mentors",
     "image": sunpreetImg,
     "quote": "\"Programming isn't about what you know; it's about what you can figure out.\" - Chris Pine",
@@ -40,7 +40,7 @@ const mentorsData = [
   {
     "id": 3,
     "name": "Jinendra Jain",
-    "role": "Community Lead",
+    "role": "Mentor",
     "category": "Mentors",
     "image": jinendraImg,
     "quote": "Code is like humour. If you have to explain it, it's bad",
@@ -54,7 +54,7 @@ const mentorsData = [
   {
     "id": 4,
     "name": "Khushi Agarwal",
-    "role": "Management & PR Lead",
+    "role": "Mentor",
     "category": "Mentors",
     "image": khushiImg,
     "quote": "Nothing can dim the light that shines from within",
@@ -68,7 +68,7 @@ const mentorsData = [
   {
     "id": 5,
     "name": "Sahil Bansal",
-    "role": "Management & PR Lead",
+    "role": "Mentor",
     "category": "Mentors",
     "image": sahilImg,
     "quote": "A young and dynamic person who has an eye for keen management tactics, and with apt interpersonal communication skills.",
@@ -82,7 +82,7 @@ const mentorsData = [
   {
     "id": 6,
     "name": "Rishita Singh",
-    "role": "Content Lead",
+    "role": "Mentor",
     "category": "Mentors",
     "image": rishitaImg,
     "quote": "Either write something worth reading or do something worth writing ",
@@ -96,7 +96,7 @@ const mentorsData = [
   {
     "id": 7,
     "name": "Samarth Narayan",
-    "role": "Web Lead",
+    "role": "Mentor",
     "category": "Mentors",
     "image": samarthImg,
     "quote": "I'm a frontend developer transitioning to full-stack & mastering Java-based Data Structures & Algorithms (DSA).",
@@ -110,7 +110,7 @@ const mentorsData = [
   {
     "id": 8,
     "name": "Harsh Kumawat",
-    "role": "AI/ML Lead",
+    "role": "Mentor",
     "category": "Mentors",
     "image": harshImg,
     "quote": "Fascinated by learning since it is something that requires ardent pursuit and diligent attention.",
@@ -124,7 +124,7 @@ const mentorsData = [
   {
     "id": 9,
     "name": "Anmol Dhuwalia",
-    "role": "Social Media Lead",
+    "role": "Mentor",
     "category": "Mentors",
     "image": anmolImg,
     "quote": "Hello, I'm Anmol Dhuwalia, and I'm thrilled to be the social media and design enthusiast at our GDG Hub. ",

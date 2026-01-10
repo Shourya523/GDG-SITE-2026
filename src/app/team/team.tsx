@@ -56,6 +56,19 @@ export default function Team() {
   const [activeCategory, setActiveCategory] = useState<Category>("Team Leads");
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
 
+  const [fade, setFade] = useState(false);
+  useEffect(() => {
+    const timeout = setTimeout(() => setFade(true), 50);
+    const handleMouseMove = (e: MouseEvent) => {
+      document.documentElement.style.setProperty("--mouse-x", `${e.clientX}px`);
+      document.documentElement.style.setProperty("--mouse-y", `${e.clientY}px`);
+    };
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => {
+      clearTimeout(timeout);
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
 
   const categoryDataMap: Record<Category, TeamMember[]> = {
     "Mentors": mentorsData as unknown as TeamMember[],
@@ -82,6 +95,8 @@ export default function Team() {
       setSelectedMember(null);
     }
   }, [activeCategory]);
+
+
   useEffect(() => {
     let loaded = 0;
     const images = filteredMembers.map(m => getImageSrc(m.image));
@@ -151,6 +166,9 @@ export default function Team() {
           </div>
 
           <div className="profile-info">
+            <div className={`role-badge fade-up${fade ? ' visible' : ''}`}>
+              {selectedMember.role}
+            </div>
             <h2 className="profile-title">
               Hi, my name is <br />
               <span className="highlight-name">{selectedMember.name}</span>
@@ -168,7 +186,7 @@ export default function Team() {
               >
 
                 {selectedMember.quote}
-                </TextAnimate>
+              </TextAnimate>
             </p>
 
             <div className="social-links">
