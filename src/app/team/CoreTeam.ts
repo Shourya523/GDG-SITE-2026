@@ -22,7 +22,7 @@ import revantImg from "./teamImages/CoreTeam/Revant_Srivastava - Revant Srivasta
 import shivamImg from "./teamImages/CoreTeam/ShivamShishodia - Shivam Shishodia.webp";
 import shriyaImg from "./teamImages/CoreTeam/Shriya Singh - Shriya Singh.webp";
 import tarushiImg from "./teamImages/CoreTeam/Tarushi Saxena - Tarushi Saxena.webp";
-import anmolImg from "./teamImages/CoreTeam/WhatsApp Image 2026-01-08 at 11.22.53 AM.jpeg"; 
+import anmolImg from "./teamImages/CoreTeam/Anmol - Anmol.webp"; 
 import dhruviImg from "./teamImages/CoreTeam/608529764_4324470704546445_4905425225679593134_n - DG Codes.webp";
 import anshImg from "./teamImages/CoreTeam/Ansh Mahajan - Ansh Mahajan.webp";
 
