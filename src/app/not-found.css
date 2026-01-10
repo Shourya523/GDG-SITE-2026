@@ -131,9 +131,7 @@
   
 
   .not-found-footer-pill {
-    margin-top:3rem;
-    width: 75%;
-    padding: 25px 25px;
+    display: none;
   }
   .btn-secondary-demo-dashboard
   {
@@ -144,8 +142,6 @@
 @media(max-width:360px)
 {
   .not-found-footer-pill {
-    margin-bottom:-1.5rem;
-    width: 75%;
-    padding: 15px 15px;
+    display: none;
   }
 }
