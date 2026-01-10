@@ -4,7 +4,7 @@ import rohanImg from "./teamImages/TeamLead/323A0716 - Rohan Gupta.webp";
 import devanshiImg from "./teamImages/TeamLead/1000235939 - Devanshi Srivastava.webp";
 import ananyaImg from "./teamImages/TeamLead/Ananya Goel_Social media - Ananya Goel.webp";
 import armanImg from "./teamImages/TeamLead/Arman Gupta - Arman Gupta.webp";
-import vaibhavImg from "./teamImages/TeamLead/vaibhav.png";
+import vaibhavImg from "./teamImages/TeamLead/VaibhavPhoto.jpg";
 import himanshuImg from "./teamImages/TeamLead/Himanshu.webp";
 
 const teamData = [
