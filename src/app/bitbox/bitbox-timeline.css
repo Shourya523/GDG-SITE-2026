@@ -262,7 +262,7 @@
   }
 }
 .roadmap-timeline-spine-wrapper {
-  margin-top: -50px;
+  margin-top: 27rem;
   padding-top: 100px;
   position: relative;
   z-index: 10;
@@ -350,4 +350,31 @@
 
 .macbook-inner-fix {
   z-index: 10;
+}
+/* ... existing styles ... */
+
+/* FIX: Target the internal background div of MagicCard inside MacBook */
+.macbook-card-fix .magic-card-bg {
+  inset: 0 !important;             /* Keep 0 to fill the screen */
+  border-radius: 0 !important;     /* Keep 0 for square corners */
+  
+  /* CHANGED: Set to black to mask the underlying border gradient blob */
+  background: #000000 !important;  
+}
+
+/* FIX: Target the internal border glow */
+.macbook-card-fix .magic-card-border,
+.macbook-card-fix .magic-card-glow {
+  border-radius: 0 !important;
+  inset: 0 !important;
+}
+
+/* Ensure the main container is strictly square */
+.macbook-card-fix {
+  border-radius: 0 !important;
+  border: none !important;
+  /* You can keep the container transparent, 
+     as long as the inner .magic-card-bg is black */
+  background-color: transparent !important; 
+  box-shadow: none !important; 
 }
