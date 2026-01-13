@@ -9,9 +9,8 @@ import { RoadmapStep } from "@/src/components/ui/RoadmapStep";
 import "./bitbox-timeline.css";
 import { RoadmapOverlay } from "@/src/components/ui/RoadmapOverlay";
 import { AuroraText } from "@/src/components/ui/aurora-text";
-import { MacbookScroll } from "@/src/components/ui/macbook-scroll"; // Ensure path is correct
+import { MacbookScroll } from "@/src/components/ui/macbook-scroll"; 
 
-// --- Countdown Component (Internal) ---
 const CountdownTimer = () => {
   const calculateTimeLeft = () => {
     // Target: Feb 1, 2026 (From Timeline item 1)

@@ -12,7 +12,7 @@ interface RippleProps extends ComponentPropsWithoutRef<"div"> {
 
 export function Ripple() {
   const mainCircleSize = 210;
-  const numCircles = 8; // More circles = more visibility
+  const numCircles = 8;
 
   return (
     <div className="ripple-container">
