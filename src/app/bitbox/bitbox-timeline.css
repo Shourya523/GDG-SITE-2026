@@ -329,7 +329,8 @@
   inset: 0 !important;             /* Removes the 1px gap causing the "weird" border look */
   border-radius: 0 !important;     /* Forces the internal background to be square */
   background: transparent !important;
-  border-radius: 10rem; /* Removes the dark overlay so the bento style shows */
+  border-radius: 10
+  rem; /* Removes the dark overlay so the bento style shows */
 }
 
 /* FIX: Target the internal border glow */
