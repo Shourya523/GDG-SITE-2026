@@ -17,19 +17,21 @@ import coreData from "./CoreTeam";
 import { Spinner } from "@/src/components/ui/spinner";
 
 type Category = "Mentors" | "Team Leads" | "Core Team";
+type BrandColor = "blue" | "red" | "yellow" | "green";
 
 interface TeamMember {
   id: number;
   name: string;
+  firstName: string;
   role: string;
   category: string;
   image: string | any;
   quote: string;
   socials: {
-    instagram?: string;
     linkedin?: string;
     github?: string;
-    discord?: string;
+    instagram?: string;
+    website?: string;
   };
 }
 
