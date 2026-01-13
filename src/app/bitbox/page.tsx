@@ -147,7 +147,6 @@ export default function BitBoxPage() {
           style={{ scaleY, originY: 0 }}
         />
 
-        {/* Filtered Timeline to remove ID 1 (Registration Open) */}
         {TimeLineDetails.filter(item => item.id !== 1).map((item, index) => (
           <RoadmapStep 
             key={item.id} 

@@ -78,9 +78,10 @@ export const MacbookScroll = ({
   const contentTranslate = useTransform(scrollYProgress, [0.3, 0.9], [0, 500]); 
 
   // 3. Merge translations: Keep attached initially (translate), then detach (contentTranslate)
+  // FIX: Explicitly typed 'any' here to satisfy TypeScript build
   const finalY = useTransform(
     [translate, contentTranslate],
-    ([t, c]) => t + c
+    ([t, c]: any) => t + c
   );
 
   // 4. Opacity: Fade out near the end so it doesn't block the next section
