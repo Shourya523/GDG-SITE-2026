@@ -1,10 +1,11 @@
 .ripple-container {
   pointer-events: none;
-  absolute: inset 0;
   user-select: none;
-  mask-image: linear-gradient(to bottom, white, transparent);
   position: absolute;
   inset: 0;
+  /* Reduced transparency in the mask to show more ripples */
+  mask-image: linear-gradient(to bottom, white 40%, transparent 90%);
+  background-color: black;
 }
 
 .ripple-circle {
@@ -13,17 +14,29 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   border-radius: 9999px;
-  border-width: 1px;
-  background-color: rgba(var(--foreground-rgb), 0.05); /* subtle inner fill */
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  animation: ripple-animation var(--duration, 2s) ease calc(var(--i, 0) * 0.2s) infinite;
+  
+  /* 1. Increased border visibility with a semi-transparent white */
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  
+  /* 2. Stronger background fill */
+  background-color: rgba(255, 255, 255, 0.03); 
+  
+  /* 3. Combined drop shadow and inner glow (box-shadow) */
+  box-shadow: 
+    0 0 20px rgba(158, 122, 255, 0.2), /* Thematic Glow (Purple) */
+    inset 0 0 10px rgba(255, 255, 255, 0.1); /* Inner edge highlight */
+
+  /* 4. Smooth scale and opacity animation */
+  animation: ripple-animation var(--duration, 3s) ease-in-out calc(var(--i, 0) * 0.2s) infinite;
 }
 
 @keyframes ripple-animation {
   0%, 100% {
     transform: translate(-50%, -50%) scale(1);
+    opacity: 0.3;
   }
   50% {
-    transform: translate(-50%, -50%) scale(0.9);
+    transform: translate(-50%, -50%) scale(0.95);
+    opacity: 0.8; /* Peaks at 80% visibility */
   }
 }

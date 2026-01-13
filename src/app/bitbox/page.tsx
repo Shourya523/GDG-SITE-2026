@@ -77,7 +77,7 @@ const CountdownTimer = () => {
 export default function BitBoxPage() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeId, setActiveId] = useState<number>(0);
-  
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"],
@@ -86,7 +86,7 @@ export default function BitBoxPage() {
   const backgroundColor = useTransform(
     scrollYProgress,
     [0, 0.4, 0.7, 1],
-    ["#000000", "#0a0a1a", "#050a14", "#000000"]
+    ["#000000","#121212", "#0a0a0a", "#000000"]
   );
 
   const scaleY = useSpring(scrollYProgress, {
@@ -98,30 +98,30 @@ export default function BitBoxPage() {
   return (
     <div ref={containerRef} className="roadmap-page-root">
       {/* Background Layer: Flickering Grid (3-6) */}
-      <RoadmapBackground 
-        backgroundColor={backgroundColor} 
-        activeRange={activeId >= 3 && activeId <= 6} 
+      <RoadmapBackground
+        backgroundColor={backgroundColor}
+        activeRange={activeId >= 0 && activeId <= 0}
       />
 
       {/* Overlay Layer: Ripple Effect (7-9) */}
-      <RoadmapOverlay activeRange={activeId >= 7 && activeId <= 9} />
+      <RoadmapOverlay activeRange={activeId >= 2 && activeId <= 9} />
 
       <header className="roadmap-header">
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           className="roadmap-eyebrow"
         >
           The Roadmap
         </motion.h2>
-        <motion.h1 
+        <motion.h1
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           className="roadmap-title"
         >
           BitBox  <AuroraText><span className="roadmap-title-muted">6.0</span></AuroraText>
         </motion.h1>
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
@@ -143,9 +143,9 @@ export default function BitBoxPage() {
 
       <div className="roadmap-timeline-spine">
         <div className="roadmap-spine-line static" />
-        <motion.div 
-          className="roadmap-spine-line active" 
-          style={{ scaleY, originY: 0 }} 
+        <motion.div
+          className="roadmap-spine-line active"
+          style={{ scaleY, originY: 0 }}
         />
 
         {/* Filtered Timeline to remove ID 1 (Registration Open) */}
