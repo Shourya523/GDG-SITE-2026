@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.roadmap-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 180px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Albert Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.roadmap-header {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  margin-bottom: 160px;
+}
+
+.roadmap-eyebrow {
+  color: #9E7AFF;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.roadmap-title {
+  color: #fff;
+  font-size: clamp(4rem, 14vw, 10rem);
+  font-weight: 900;
+  letter-spacing: -0.06em;
+  line-height: 0.85;
+  margin: 0;
+}
+
+.roadmap-title-muted {
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.roadmap-tagline {
+  color: #a1a1a6;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  margin-top: 40px;
+  font-weight: 500;
+  max-width: 700px;
+  line-height: 1.3;
+}
+
+.roadmap-timeline-spine {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+/* Base Spine (Brighter Static Line) */
+.roadmap-spine-line.static {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* Active Spine (Glowing fill line) */
+.roadmap-spine-line.active {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #9E7AFF, #FE8BBB);
+  box-shadow: 0 0 15px rgba(158, 122, 255, 0.5);
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.roadmap-step {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+}
+
+.roadmap-dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background: #000;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  z-index: 30;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.roadmap-dot-core {
+  position: absolute;
+  inset: 4px;
+  background: linear-gradient(135deg, #9E7AFF, #FE8BBB);
+  border-radius: 50%;
+}
+
+.roadmap-card-anchor {
+  width: 42%;
+}
+
+.step-left { justify-content: flex-start; }
+.step-right { justify-content: flex-end; }
+
+.roadmap-bento-box {
+  background: rgba(15, 15, 15, 0.4) !important;
+  backdrop-filter: blur(25px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 40px !important;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.roadmap-bento-box:hover {
+  transform: scale(1.03) translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.roadmap-box-inner {
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.roadmap-box-date {
+  color: #9E7AFF;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.roadmap-box-title {
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin: 0;
+}
+
+.roadmap-box-text {
+  color: #a1a1a6;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: 500;
+  margin: 0;
+}
+
+.roadmap-box-number {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  font-size: 8rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.015); /* Slightly brighter for visibility */
+  pointer-events: none;
+  font-style: italic;
+  line-height: 1;
+}
+
+@media (max-width: 868px) {
+  .roadmap-spine-line.static, 
+  .roadmap-spine-line.active { left: 24px; transform: none; }
+  .roadmap-dot { left: 24px; transform: translateX(-50%); }
+  .roadmap-card-anchor { width: calc(100% - 80px); margin-left: 80px; }
+  .step-left, .step-right { justify-content: flex-start; }
+  .roadmap-box-inner { padding: 40px; }
+  .roadmap-box-title { font-size: 1.85rem; }
+  .roadmap-box-number { font-size: 5rem; top: 20px; right: 20px; }
+}
