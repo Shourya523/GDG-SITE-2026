@@ -50,7 +50,6 @@ export default function BitBoxPage() {
       <RoadmapOverlay activeRange={activeId >= 7 && activeId <= 9} />
 
       {/* MACBOOK SECTION */}
-      {/* This wraps the Header and the First Card */}
       <MacbookScroll 
         title={
           <div className="roadmap-header" style={{ marginBottom: 0, paddingTop: 0, paddingBottom: '2rem' }}>
@@ -81,10 +80,11 @@ export default function BitBoxPage() {
           </div>
         }
         screenContent={
-          <div style={{ width: '100%', height: '100%', position: 'relative', backgroundColor: '#000' }}>
+          // Removed backgroundColor: '#000' here to prevent the "weird black background"
+          <div style={{ width: '100%', height: '100%', position: 'relative' }}>
             <MagicCard 
-              // Using Tailwind classes for layout to fix TS 'style' errors
-              className="roadmap-bento-box w-full h-full rounded-none border-none flex items-center justify-center"
+              // Removed 'rounded-none' and 'border-none' so it looks like a normal card with borders
+              className="roadmap-bento-box w-full h-full flex items-center justify-center"
               gradientSize={150}
               gradientOpacity={0.8}
               gradientColor="#262626"
@@ -105,7 +105,6 @@ export default function BitBoxPage() {
       {/* TIMELINE SPINE SECTION */}
       <div 
         className="roadmap-timeline-spine" 
-        // Negative margin pulls the spine up to meet the macbook scroll end point
         style={{ marginTop: '-50px', paddingTop: '100px', position: 'relative', zIndex: 10 }} 
       >
         <div className="roadmap-spine-line static" />
@@ -118,7 +117,6 @@ export default function BitBoxPage() {
           <RoadmapStep 
             key={item.id} 
             item={item} 
-            // We start index at 1 because 0 is in the Macbook
             index={index + 1} 
             onVisible={(id) => setActiveId(id)}
           />
