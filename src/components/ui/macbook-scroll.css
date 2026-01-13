@@ -158,19 +158,13 @@
 .macbook-scroll-component-screen {
   position: absolute;
   inset: 0;
-  height: 24rem;
+  height: 20rem;
   width: 32rem;
-  border-radius: 1rem;
+
   background-color: #010101;
   padding: 0.5rem;
 }
 
-.macbook-scroll-component-screen-inner {
-  position: absolute;
-  inset: 0;
-  border-radius: 0.5rem;
-  background-color: #272729;
-}
 
 .macbook-scroll-component-screen-image {
   position: absolute;
@@ -219,11 +213,6 @@
   border-radius: 4px;
   padding: 0.5px;
   will-change: transform;
-}
-
-.macbook-scroll-component-key-wrapper-backlit {
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 20px 25px -5px rgba(255, 255, 255, 0.1), 0 8px 10px -6px rgba(255, 255, 255, 0.1);
 }
 
 /* Actual Key Cap */

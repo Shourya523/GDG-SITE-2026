@@ -174,7 +174,8 @@ export const Lid = ({
         <div className="macbook-scroll-component-screen-inner" />
         {/* Logic: Render Custom Content if provided, else render Image */}
         {screenContent ? (
-           <div className="absolute inset-0 h-full w-full overflow-hidden rounded-lg bg-[#272729]">
+           // FIXED: Removed rounded-lg and gray background. Used black to blend with bezel.
+           <div className="absolute inset-0 h-full w-full overflow-hidden bg-[#010101]">
              {screenContent}
            </div>
         ) : (
