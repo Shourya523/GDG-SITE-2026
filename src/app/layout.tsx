@@ -22,7 +22,6 @@ const navItems = [
   { name: "Events", link: "/events/2022-2023", icon: <Calendar size={20} /> },
   { name: "Team", link: "/team", icon: <Users size={20} /> },
   { name: "BitBox", link: "/bitbox", icon: <Rocket size={20} /> },
-  { name: "StudyJam", link: "/studyjam", icon: <BookOpen size={20} /> },
 ];
 
 export default function layout({

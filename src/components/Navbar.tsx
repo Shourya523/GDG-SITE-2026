@@ -11,7 +11,6 @@ const pages = [
   { name: "Events", route: "/events" },
   { name: "Team", route: "/team" },
   { name: "BitBox", route: "/bitbox" },
-  { name: "StudyJam", route: "/studyjam" },
 ];
 
 export default function Navbar() {
