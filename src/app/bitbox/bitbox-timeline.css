@@ -261,3 +261,65 @@
     right: 20px; 
   }
 }
+.roadmap-timeline-spine-wrapper {
+  margin-top: -50px;
+  padding-top: 100px;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+.macbook-header-adjust {
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 2rem;
+}
+
+.title-small {
+  font-size: clamp(3rem, 10vw, 6rem) !important;
+}
+
+.tagline-margin {
+  margin-top: 20px !important;
+}
+
+.macbook-screen-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #000;
+}
+
+.macbook-card-fix {
+  width: 100%;
+  height: 100%;
+  border-radius: 0 !important;
+  border: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.macbook-inner-fix {
+  padding: 24px !important;
+  text-align: center;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+
+.date-small { font-size: 1rem !important; }
+.title-mid { font-size: 2.5rem !important; margin-top: 10px !important; }
+.text-small { font-size: 1rem !important; margin-top: 10px !important; }
+.number-small { 
+  font-size: 4rem !important; 
+  top: 10px !important; 
+  right: 20px !important; 
+  opacity: 0.3 !important; 
+}
