@@ -56,10 +56,10 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="footer-copyright">
-          <p>&copy; 2026 Google Developer Group JIIT. All rights reserved.</p>
+          {/* <p>&copy; 2026 Google Developer Group JIIT. All rights reserved.</p>
           <p className="made-with-love">
             Made with ❤️ by <strong>Shourya</strong> & <strong>Ansh</strong>
-          </p>
+          </p> */}
         </div>
 
       </div>
