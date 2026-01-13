@@ -87,13 +87,26 @@
   text-align: center;
 }
 
+/* --- Macbook Wrapper (FIXED) --- */
+.roadmap-macbook-wrapper {
+  width: 100%;
+  /* Removed overflow: hidden so 3D elements don't get clipped by the bounding box */
+  overflow: visible; 
+  margin-top: -150px; 
+  margin-bottom: 0px;
+  
+  /* ADDED: Position and Z-Index to sit ABOVE the timeline spine */
+  position: relative;
+  z-index: 50; 
+}
+
 /* Timeline Structure */
 .roadmap-timeline-spine {
   position: relative;
-  z-index: 10;
+  z-index: 10; /* Lower than Macbook wrapper now */
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin-top: 14rem;
   display: flex;
   flex-direction: column;
   gap: 140px;
@@ -214,6 +227,108 @@
   line-height: 1;
 }
 
+/* --- Countdown Screen Styles --- */
+.macbook-screen-content {
+  width: 100%;
+  height: 100%;
+  background: transparent; /* Updated as requested */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  font-family: 'Courier New', Courier, monospace;
+  position: relative;
+}
+
+/* Scanline effect overlay */
+.macbook-screen-content::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.countdown-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.countdown-logo {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  color: #9E7AFF;
+  text-shadow: 0 0 10px rgba(158, 122, 255, 0.5);
+}
+
+.countdown-status {
+  font-size: 0.7rem;
+  color: #FE8BBB;
+  letter-spacing: 0.1em;
+  opacity: 0.8;
+  animation: blink 2s infinite;
+}
+
+.countdown-grid {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.time-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time-value {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1;
+  background: linear-gradient(to bottom, #fff, #999);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.time-value.accent {
+  background: linear-gradient(to bottom, #FE8BBB, #ff5e9e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.time-label {
+  font-size: 0.6rem;
+  margin-top: 0.5rem;
+  color: #666;
+  letter-spacing: 0.2em;
+}
+
+.time-separator {
+  font-size: 2rem;
+  color: #333;
+  margin-top: -1.5rem;
+}
+
+.countdown-footer {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.3; }
+}
+
 /* Consolidated Media Queries */
 @media (max-width: 868px) {
   .roadmap-header { 
@@ -260,4 +375,9 @@
     top: 20px; 
     right: 20px; 
   }
+  
+  /* Countdown adjustments */
+  .time-value { font-size: 2rem; }
+  .time-separator { font-size: 1.5rem; margin-top: -1rem; }
+  .countdown-logo { font-size: 1rem; }
 }

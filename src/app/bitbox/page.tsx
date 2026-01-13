@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { TimeLineDetails } from "./Timeline";
 
@@ -9,6 +9,70 @@ import { RoadmapStep } from "@/src/components/ui/RoadmapStep";
 import "./bitbox-timeline.css";
 import { RoadmapOverlay } from "@/src/components/ui/RoadmapOverlay";
 import { AuroraText } from "@/src/components/ui/aurora-text";
+import { MacbookScroll } from "@/src/components/ui/macbook-scroll"; // Ensure path is correct
+
+// --- Countdown Component (Internal) ---
+const CountdownTimer = () => {
+  const calculateTimeLeft = () => {
+    // Target: Feb 1, 2026 (From Timeline item 1)
+    const difference = +new Date("2026-02-01") - +new Date();
+    let timeLeft = { days: 0, hours: 0, minutes: 0, seconds: 0 };
+
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
+    }
+    return timeLeft;
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div className="macbook-screen-content">
+      <div className="countdown-header">
+        <span className="countdown-logo">BITBOX 6.0</span>
+        <span className="countdown-status">SYSTEM INITIALIZATION</span>
+      </div>
+      
+      <div className="countdown-grid">
+        <div className="time-unit">
+          <span className="time-value">{String(timeLeft.days).padStart(2, '0')}</span>
+          <span className="time-label">DAYS</span>
+        </div>
+        <div className="time-separator">:</div>
+        <div className="time-unit">
+          <span className="time-value">{String(timeLeft.hours).padStart(2, '0')}</span>
+          <span className="time-label">HRS</span>
+        </div>
+        <div className="time-separator">:</div>
+        <div className="time-unit">
+          <span className="time-value">{String(timeLeft.minutes).padStart(2, '0')}</span>
+          <span className="time-label">MIN</span>
+        </div>
+        <div className="time-separator">:</div>
+        <div className="time-unit">
+          <span className="time-value accent">{String(timeLeft.seconds).padStart(2, '0')}</span>
+          <span className="time-label">SEC</span>
+        </div>
+      </div>
+
+      <div className="countdown-footer">
+        Registration Opens Soon
+      </div>
+    </div>
+  );
+};
 
 export default function BitBoxPage() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -67,6 +131,16 @@ export default function BitBoxPage() {
         </motion.p>
       </header>
 
+      {/* MACBOOK SECTION */}
+      <div className="roadmap-macbook-wrapper">
+        <MacbookScroll 
+          title={<span className="text-3xl font-bold text-white/20">The Console</span>}
+          src="/placeholder.png" // Not used because screenContent is provided
+          showGradient={true}
+          screenContent={<CountdownTimer />}
+        />
+      </div>
+
       <div className="roadmap-timeline-spine">
         <div className="roadmap-spine-line static" />
         <motion.div 
@@ -74,7 +148,8 @@ export default function BitBoxPage() {
           style={{ scaleY, originY: 0 }} 
         />
 
-        {TimeLineDetails.map((item, index) => (
+        {/* Filtered Timeline to remove ID 1 (Registration Open) */}
+        {TimeLineDetails.filter(item => item.id !== 1).map((item, index) => (
           <RoadmapStep 
             key={item.id} 
             item={item} 
