@@ -8,6 +8,7 @@ import { RoadmapBackground } from "@/src/components/ui/RoadmapBackground";
 import { RoadmapStep } from "@/src/components/ui/RoadmapStep";
 import "./bitbox-timeline.css";
 import { RoadmapOverlay } from "@/src/components/ui/RoadmapOverlay";
+import { AuroraText } from "@/src/components/ui/aurora-text";
 
 export default function BitBoxPage() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -54,7 +55,7 @@ export default function BitBoxPage() {
           whileInView={{ opacity: 1, scale: 1 }}
           className="roadmap-title"
         >
-          BitBox <span className="roadmap-title-muted">6.0</span>
+          BitBox  <AuroraText><span className="roadmap-title-muted">6.0</span></AuroraText>
         </motion.h1>
         <motion.p 
           initial={{ opacity: 0 }}
