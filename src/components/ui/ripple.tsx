@@ -1,7 +1,7 @@
 "use client";
 
 import React, { ComponentPropsWithoutRef, CSSProperties } from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "@/src/lib/utils";
 import "./Ripple.css";
 
 interface RippleProps extends ComponentPropsWithoutRef<"div"> {

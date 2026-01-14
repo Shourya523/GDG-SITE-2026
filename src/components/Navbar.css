@@ -25,10 +25,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 14px;
+  padding: 12px 14px;
   width: 90%;
-  max-width: 1000px;
-  height: 48px;
+  max-width: 1030px;
+  height: 65px;
   border-radius: 24px;
   background: var(--glass-bg);
   background-clip: padding-box;

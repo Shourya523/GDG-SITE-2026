@@ -2,6 +2,8 @@
 import "./homePage.css";
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
+import { AnimatePresence, motion } from "framer-motion"
+
 import {
   CheckCircle,
   CalendarRange,
@@ -20,8 +22,12 @@ import HomePageCards from "@/src/components/HomePageCards";
 import HomePageEventCards from "../components/HomePageEventCards";
 import SocialHomePage from "../components/SocialCardsHomePage";
 import { TextAnimate } from "../components/ui/text-animate";
+import { AnimatedList } from "../components/ui/animated-list";
+import { BitBoxComingSoon } from "../components/BitBoxCoingSoonCard";
+import { useRouter } from "next/navigation";
 
 export default function HomePage() {
+  const router = useRouter()
   const [fade, setFade] = useState(false);
   const [currTitle, setCurTitle] = useState("");
   const [currSubTitle, setSubCurTitle] = useState("");
@@ -88,9 +94,41 @@ export default function HomePage() {
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
+  const [showToast, setShowToast] = useState(false)
+
+  useEffect(() => {
+    const showTimer = setTimeout(() => setShowToast(true), 300)
+    const hideTimer = setTimeout(() => setShowToast(false), 10000)
+
+    return () => {
+      clearTimeout(showTimer)
+      clearTimeout(hideTimer)
+    }
+  }, [])
+
+
 
   return (
     <section >
+      <AnimatePresence>
+        {showToast && (
+          <motion.div
+            initial={{ opacity: 0, x: 20, scale: 0.95 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            exit={{ opacity: 0, x: 20, scale: 0.95 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ type: "spring", stiffness: 260, damping: 25 }}
+            className="fixed bottom-6 left-1/2 -translate-x-1/2 md:left-auto md:right-10 md:translate-x-0 z-50 cursor-pointer"
+            onClick={() => router.push("/bitbox")}
+          >
+            <BitBoxComingSoon />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+
+
 
       <section className="hero">
         <div className={`hero-badge fade-up${fade ? ' visible' : ''}`}>
@@ -120,7 +158,7 @@ export default function HomePage() {
               borderRadius: "999px",
               color: "var(--bg-main)",
               textDecoration: "none",
-              backgroundColor:"var(--text-primary)"
+              backgroundColor: "var(--text-primary)"
             }}
           >
             View Events

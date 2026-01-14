@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
         <div className="cta-content">
           <h2>Ready to join our community?</h2>
           <p>Connect with fellow developers, learn new skills, and build amazing projects together.</p>
-          <button className="cta-button" onClick={()=>router.push("/registration-form")}>Become a Member</button>
+          <button className="cta-button" onClick={()=>router.push("/gdg-registration-form")}>Become a Member</button>
         </div>
         {/* Ambient Glows behind the card */}
         <div className="cta-glow glow-blue"></div>
@@ -57,9 +57,6 @@ const Footer: React.FC = () => {
 
         <div className="footer-copyright">
           <p>&copy; 2026 Google Developer Group JIIT. All rights reserved.</p>
-          <p className="made-with-love">
-            Made with ❤️ by <strong>Shourya</strong> & <strong>Ansh</strong>
-          </p>
         </div>
 
       </div>
