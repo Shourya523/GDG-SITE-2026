@@ -170,8 +170,9 @@
 }
 
 .carousel-avatar-btn {
-  width: 100px;
+  width: 100px !important;
   height: 100px;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   overflow: hidden;
   border: 2px solid transparent;
@@ -224,8 +225,9 @@
   }
 
   .carousel-avatar-btn {
-    width: 80px;
-    height: 80px;
+    width: 70px !important;
+    height: 70px;
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid transparent;
@@ -259,11 +261,6 @@
 
     margin-top: -0.75rem;
     padding: 0 3rem;
-  }
-
-  .carousel-avatar-btn {
-    width: 50px;
-    height: 50px;
   }
 }
 

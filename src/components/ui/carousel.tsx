@@ -217,8 +217,8 @@ function CarouselNext({
       className={cn(
         "absolute rounded-full",
         orientation === "horizontal"
-          ? "top-1/2 -right-12 -translate-y-1/2"
-          : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
+          ? "top-1/2 -right-16 -translate-y-1/2" // Changed from -right-12 to -right-16
+          : "-bottom-16 left-1/2 -translate-x-1/2 rotate-90", // Changed from -bottom-12 to -bottom-16
         className
       )}
       disabled={!canScrollNext}

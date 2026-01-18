@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import "./Navbar.css";
+import { AuroraText } from "./ui/aurora-text";
 
 const LATEST_EVENTS_YEAR = "2022-2023";
 
@@ -11,6 +12,7 @@ const pages = [
   { name: "Events", route: "/events" },
   { name: "Team", route: "/team" },
   { name: "BitBox", route: "/bitbox" },
+  { name: "Contact", route: "/contact-us" },
 ];
 
 export default function Navbar() {
@@ -21,19 +23,28 @@ export default function Navbar() {
     setIsOpen(false);
   }, [pathname]);
 
-  return (
+  const isBitBox = pathname.startsWith("/bitbox");
 
+  return (
     <div className="navbar-container">
       <nav className={`navbar ${isOpen ? "is-open" : ""}`}>
         <div className="navbar-brand">
           <Link href="/" className="navbar-logo-link">
             <div className="navbar-logo">
-              <img
-                src="https://raw.githubusercontent.com/dsc-jiit-128/GDSC-Lead-Map/main/gdsc-logo.gif"
-                alt="GDSC Logo"
-              />
+              {isBitBox ? (
+                <AuroraText className="text-[22px] font-bold tracking-tighter">
+                  6.0
+                </AuroraText>
+              ) : (
+                <img
+                  src="https://raw.githubusercontent.com/dsc-jiit-128/GDSC-Lead-Map/main/gdsc-logo.gif"
+                  alt="GDSC Logo"
+                />
+              )}
             </div>
-            <span className="brand-text">GDG JIIT 128</span>
+            <span className="brand-text">
+              {isBitBox ? "BITBOX" : "GDG JIIT 128"}
+            </span>
           </Link>
         </div>
 
@@ -47,14 +58,15 @@ export default function Navbar() {
 
             return (
               <li key={route} className={isActive ? "active" : ""}>
-                <Link href={href}>{name}</Link>
+                <Link href={href}>{name}
+                </Link>
               </li>
             );
           })}
         </ul>
 
-        <button 
-          className="hamburger" 
+        <button
+          className="hamburger"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >

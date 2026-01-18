@@ -80,7 +80,7 @@
 .navbar-links {
   display: flex;
   list-style: none;
-  gap: 70px;
+  gap: 50px; /* Reduced gap slightly to accommodate 4th item */
   padding: 0;
   align-items: center;
   justify-content: center;
@@ -145,13 +145,11 @@
     min-height: 48px;
     flex-wrap: wrap;
     padding: 10px 16px;
-    
-    /* Left aligned adjustments */
     width: 85%; 
     max-width: 100vw; 
-    margin-left: 12.5px; /* Aligns the container to the left side of the screen */
+    margin-left: 12.5px;
     margin-right: auto;
-    justify-content: space-between; /* Keeps brand left and hamburger right */
+    justify-content: space-between;
   }
 
   .hamburger {
@@ -165,8 +163,8 @@
     width: 100%;
     flex-direction: column;
     gap: 12px;
-    padding: 15px 10px; /* Added left padding for links */
-    align-items: flex-start; /* Aligns link text to the left */
+    padding: 15px 10px;
+    align-items: flex-start;
     justify-content: flex-start;
   }
 
@@ -176,9 +174,9 @@
 
   .brand-text {
     font-size: 14px;
+    margin-right: 0; /* Resetting margin for mobile layout */
   }
 
-  /* Adjust underline animation for left alignment */
   .navbar-links li a::after {
     left: 0;
   }

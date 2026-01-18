@@ -1,6 +1,6 @@
 import dbConnect from "@/src/lib/dbConnect";
-import { FormModel, FormType } from "@/src/model/formSchema.model";
-import { FormSchemaZod } from "@/src/validation/form.validation";
+import { FormModel, FormType } from "@/src/model/registrationFormSchema.model";
+import { FormSchemaZod } from "@/src/validation/registrationForm.validation";
 import { NextResponse } from "next/server";
 
 

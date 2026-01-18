@@ -6,7 +6,9 @@ import ananyaImg from "./teamImages/TeamLead/Ananya Goel_Social media - Ananya G
 import armanImg from "./teamImages/TeamLead/Arman Gupta - Arman Gupta.webp";
 import vaibhavImg from "./teamImages/TeamLead/VaibhavPhoto.jpg";
 import himanshuImg from "./teamImages/TeamLead/Himanshu.webp";
-import divyanshImg from "./teamImages/TeamLead/divyanshSingh.webp"
+import divyanshImg from "./teamImages/TeamLead/divyanshSingh.webp";
+import aditiImg from "./teamImages/TeamLead/Aditi Kansal - Aditi Kansal.webp";
+import shauryaImg from "./teamImages/TeamLead/Shaurya-Rahlon.webp";
 
 const teamData = [
   {
@@ -121,7 +123,6 @@ const teamData = [
       "discord": ""
     }
   },
-
   {
     "id": 9,
     "name": "Himanshu Singh",
@@ -134,6 +135,34 @@ const teamData = [
       "linkedin": "https://www.linkedin.com/in/himaansh-uu/",
       "instagram": "https://www.instagram.com/himaansh_uu/",
       "discord": "https://discord.com/users/impressridible"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Aditi Kansal",
+    "role": "Community Lead",
+    "category": "Team Leads",
+    "image": aditiImg,
+    "quote": "Direction with intent",
+    "socials": {
+      "github": "https://github.com/aditikansal01",
+      "linkedin": "https://www.linkedin.com/in/aditi-kansal-37b09a314/",
+      "instagram": "https://www.instagram.com/aditikansal_01/",
+      "discord": "aditi"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Shaurya Rahlon",
+    "role": "Cloud and DevOps Lead",
+    "category": "Team Leads",
+    "image": shauryaImg,
+    "quote": "There are no traffic jams in the extra mile",
+    "socials": {
+      "github": "https://github.com/ShauryaRahlon",
+      "linkedin": "https://www.linkedin.com/in/shaurya-rahlon",
+      "instagram": "https://www.instagram.com/sh4urya.r",
+      "discord": "https://discord.com/users/jimmy32_"
     }
   }
 ];

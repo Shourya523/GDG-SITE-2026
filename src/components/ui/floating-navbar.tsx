@@ -7,12 +7,14 @@ import {
   useMotionValueEvent,
 } from "motion/react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import "./floating-navbar.css";
 import { ReactNode } from "react";
+import { AuroraText } from "./aurora-text";
 
 type Props = {
   navItems: {
-    name: string;
+    name: string | ReactNode;
     link: string;
     icon?: ReactNode;
   }[];
@@ -25,6 +27,9 @@ export const FloatingNav = ({
 }: Props) => {
   const { scrollYProgress } = useScroll();
   const [visible, setVisible] = useState(true);
+  const pathname = usePathname();
+
+  const isBitBox = pathname.startsWith("/bitbox");
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     if (typeof current === "number") {
@@ -55,12 +60,20 @@ export const FloatingNav = ({
       >
         <Link href="/" className="floating-nav-brand">
           <div className="floating-navbar-logo">
-            <img
-              src="https://raw.githubusercontent.com/dsc-jiit-128/GDSC-Lead-Map/main/gdsc-logo.gif"
-              alt="GDSC Logo"
-            />
+            {isBitBox ? (
+              <AuroraText className="text-[18px] font-bold tracking-tighter">
+                6.0
+              </AuroraText>
+            ) : (
+              <img
+                src="https://raw.githubusercontent.com/dsc-jiit-128/GDSC-Lead-Map/main/gdsc-logo.gif"
+                alt="GDSC Logo"
+              />
+            )}
           </div>
-          <span className="floating-brand-text">GDG 128</span>
+          <span className="floating-brand-text">
+            {isBitBox ? "BITBOX" : "GDG 128"}
+          </span>
         </Link>
 
         <div className="floating-nav-divider" />

@@ -3,8 +3,7 @@ import { Albert_Sans } from "next/font/google";
 import "./globals.css";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import { FloatingNav } from "../components/ui/floating-navbar";
-import { Home, Calendar, Users, Rocket, BookOpen } from "lucide-react";
+import { SmartFloatingNav } from "../components/FloatingNavMobile";
 
 const albertSans = Albert_Sans({
   subsets: ["latin"],
@@ -16,13 +15,6 @@ export const metadata: Metadata = {
   title: "GDG JIIT",
   description: "Google Developer Groups is a student-led community.",
 };
-
-const navItems = [
-  { name: "Home", link: "/", icon: <Home size={20} /> },
-  { name: "Events", link: "/events/2022-2023", icon: <Calendar size={20} /> },
-  { name: "Team", link: "/team", icon: <Users size={20} /> },
-  { name: "BitBox", link: "/bitbox", icon: <Rocket size={20} /> },
-];
 
 export default function layout({
   children,
@@ -44,7 +36,7 @@ export default function layout({
         </div>
 
         <div className="hidden-desktop">
-          <FloatingNav navItems={navItems} />
+          <SmartFloatingNav />
         </div>
 
         {children}

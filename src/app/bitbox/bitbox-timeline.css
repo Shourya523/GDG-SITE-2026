@@ -211,7 +211,7 @@
 @media (min-width: 868px) {
   .roadmap-card-anchor {
     width: 42%;
-    margin-left: 0;
+    margin-left: 0rem;
   }
 }
 
@@ -351,4 +351,10 @@
     font-size: 2rem;
     margin-top: -1.5rem;
   }
+}
+@media  (max-width:760px){
+  .roadmap-dot{
+    margin-left: -1.25rem;
+  }
+  
 }

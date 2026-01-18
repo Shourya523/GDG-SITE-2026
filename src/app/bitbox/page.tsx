@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { TimeLineDetails } from "./Timeline";
 import { RoadmapBackground } from "@/src/components/ui/RoadmapBackground";
@@ -12,67 +12,7 @@ import BentoComponent from "@/src/components/BentoGrid";
 import MiniGamesCard from "@/src/components/MiniGamesCard";
 import { mockGames } from "./MiniGameCardDetails";
 import SpeakerGrid from "@/src/components/SpeakerCard";
-
-const CountdownTimer = () => {
-  const calculateTimeLeft = () => {
-    const difference = +new Date("2026-02-01") - +new Date();
-    let timeLeft = { days: 0, hours: 0, minutes: 0, seconds: 0 };
-
-    if (difference > 0) {
-      timeLeft = {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
-      };
-    }
-    return timeLeft;
-  };
-
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
-    return () => clearInterval(timer);
-  }, []);
-
-  return (
-    <div className="macbook-screen-content">
-      <div className="countdown-header">
-        <span className="countdown-logo">BITBOX 6.0</span>
-        <span className="countdown-status">SYSTEM INITIALIZATION</span>
-      </div>
-
-      <div className="countdown-grid">
-        <div className="time-unit">
-          <span className="time-value">{String(timeLeft.days).padStart(2, '0')}</span>
-          <span className="time-label">DAYS</span>
-        </div>
-        <div className="time-separator">:</div>
-        <div className="time-unit">
-          <span className="time-value">{String(timeLeft.hours).padStart(2, '0')}</span>
-          <span className="time-label">HRS</span>
-        </div>
-        <div className="time-separator">:</div>
-        <div className="time-unit">
-          <span className="time-value">{String(timeLeft.minutes).padStart(2, '0')}</span>
-          <span className="time-label">MIN</span>
-        </div>
-        <div className="time-separator">:</div>
-        <div className="time-unit">
-          <span className="time-value accent">{String(timeLeft.seconds).padStart(2, '0')}</span>
-          <span className="time-label">SEC</span>
-        </div>
-      </div>
-
-      <div className="countdown-footer">
-        Registration Opens Soon
-      </div>
-    </div>
-  );
-};
+import Sponsors from "@/src/components/Sponsors"; // <--- Import the new component
 
 export default function BitBoxPage() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -117,7 +57,7 @@ export default function BitBoxPage() {
           whileInView={{ opacity: 1, scale: 1 }}
           className="roadmap-title"
         >
-          BitBox  <AuroraText><span className="roadmap-title-muted">6.0</span></AuroraText>
+          BitBox <AuroraText><span className="roadmap-title-muted">6.0</span></AuroraText>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0 }}
@@ -164,7 +104,10 @@ export default function BitBoxPage() {
         </div>
       </div>
 
-      <div className="w-[80%] flex flex-col items-center justify-center mt-[200px] mb-[100px]">
+      {/* SPONSORS SECTION */}
+      <Sponsors />
+
+      <div className="w-[80%] flex flex-col items-center justify-center mt-[100px] mb-[100px]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
