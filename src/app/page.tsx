@@ -16,7 +16,8 @@ import {
   FolderHeart,
   Users,
   Code2,
-  Globe
+  Globe,
+  Bell
 } from "lucide-react";
 import HomePageCards from "@/src/components/HomePageCards";
 import HomePageEventCards from "../components/HomePageEventCards";
@@ -31,38 +32,33 @@ export default function HomePage() {
   const [fade, setFade] = useState(false);
   const [currTitle, setCurTitle] = useState("");
   const [currSubTitle, setSubCurTitle] = useState("");
-  const containerRef = useRef<HTMLDivElement>(null);
+  const [showToast, setShowToast] = useState(false);
+  const [hasNotification, setHasNotification] = useState(true);
 
   const heroTitleMessages = [
     {
       heroTitle: "Create. Conquer. Collaborate.",
-      heroSubTitle:
-        "The ultimate hub for student builders. Build your squad, win the hackathons, and own the campus tech scene."
+      heroSubTitle: "The ultimate hub for student builders. Build your squad, win the hackathons, and own the campus tech scene."
     },
     {
       heroTitle: "Build for mobile. Scale with cloud.\nThrive together.",
-      heroSubTitle:
-        "Stop just building apps—start building infrastructure. Join the community pushing mobile and cloud to the limit."
+      heroSubTitle: "Stop just building apps—start building infrastructure. Join the community pushing mobile and cloud to the limit."
     },
     {
       heroTitle: "Shape the future of\nWeb and AI.",
-      heroSubTitle:
-        "Moving beyond the basics. From React to LLMs, we’re tinkering with the tech that will define our careers."
+      heroSubTitle: "Moving beyond the basics. From React to LLMs, we’re tinkering with the tech that will define our careers."
     },
     {
       heroTitle: "Innovate with data.\nLead with AI.",
-      heroSubTitle:
-        "Deep dive into data science and neural networks. Turn your academic projects into real-world AI applications."
+      heroSubTitle: "Deep dive into data science and neural networks. Turn your academic projects into real-world AI applications."
     },
     {
       heroTitle: "Innovate. Learn. Grow.",
-      heroSubTitle:
-        "The campus sandbox for big ideas. A place to experiment with new tech, share knowledge, and level up together."
+      heroSubTitle: "The campus sandbox for big ideas. A place to experiment with new tech, share knowledge, and level up together."
     },
     {
       heroTitle: "Design. Develop. Deploy.",
-      heroSubTitle:
-        "Go beyond the syllabus. Master the full product lifecycle and ship live code before you even graduate."
+      heroSubTitle: "Go beyond the syllabus. Master the full product lifecycle and ship live code before you even graduate."
     }
   ];
 
@@ -70,17 +66,13 @@ export default function HomePage() {
 
   useEffect(() => {
     let randomIndex;
-
     do {
       randomIndex = Math.floor(Math.random() * heroTitleMessages.length);
     } while (randomIndex === prevIndexRef.current);
-
     prevIndexRef.current = randomIndex;
-
     setCurTitle(heroTitleMessages[randomIndex].heroTitle);
     setSubCurTitle(heroTitleMessages[randomIndex].heroSubTitle);
   }, []);
-
 
   useEffect(() => {
     const timeout = setTimeout(() => setFade(true), 50);
@@ -94,41 +86,50 @@ export default function HomePage() {
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
-  const [showToast, setShowToast] = useState(false)
-
-  useEffect(() => {
-    const showTimer = setTimeout(() => setShowToast(true), 300)
-    const hideTimer = setTimeout(() => setShowToast(false), 10000)
-
-    return () => {
-      clearTimeout(showTimer)
-      clearTimeout(hideTimer)
-    }
-  }, [])
-
-
 
   return (
-    <section >
+    <section>
+      <div 
+        className="fixed z-[60] cursor-pointer 
+                    right-6 md:top-7.5 md:right-10 
+                   bottom-6 md:bottom-auto"
+        onClick={() => {
+          setShowToast(!showToast);
+        }}
+      >
+        <div className="relative p-5.5 bg-white/5 backdrop-blur-md rounded-full border border-white/10 hover:bg-white/10 transition-colors">
+          <Bell className="text-white w-6 h-6" />
+          {hasNotification && (
+            <span className="absolute top-3 right-4 flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+            </span>
+          )}
+        </div>
+      </div>
+
       <AnimatePresence>
         {showToast && (
           <motion.div
-            initial={{ opacity: 0, x: 20, scale: 0.95 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            exit={{ opacity: 0, x: 20, scale: 0.95 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
-            transition={{ type: "spring", stiffness: 260, damping: 25 }}
-            className="fixed bottom-6 left-1/2 -translate-x-1/2 md:left-auto md:right-10 md:translate-x-0 z-50 cursor-pointer scale-85 md:scale-100"
-            onClick={() => router.push("/bitbox")}
+            initial={{ opacity: 0, y: 20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.95 }}
+            className="fixed z-50 
+                       bottom-25 right-10 md:bottom-auto md:top-27.5 md:right-10 
+                       left-26 -translate-x-1/2 md:left-auto md:translate-x-0"
           >
-            <BitBoxComingSoon />
+            <div className="relative group cursor-pointer" onClick={() => router.push("/bitbox")}>
+                {/* <div className="absolute top-4 -right-27 z-10 bg-white/10 backdrop-blur-lg rounded-full p-1 border border-white/20 hover:bg-white/20" 
+                     onClick={(e) => { e.stopPropagation(); setShowToast(false); }}>
+                    <XCircle className="w-5 h-5 text-white/70" />
+                </div> */}
+                <div className="scale-85 md:scale-100 origin-bottom md:origin-top-right">
+                    <BitBoxComingSoon />
+                </div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
-
-
-
 
       <section className="hero">
         <div className={`hero-badge fade-up${fade ? ' visible' : ''}`}>
@@ -182,6 +183,7 @@ export default function HomePage() {
           <SocialHomePage />
         </div>
       </section>
+
       <section className={`what-do-we-do fade-up ${fade ? "visible" : ""}`}>
         <span className="section-label">Our Impact</span>
 
@@ -244,7 +246,6 @@ export default function HomePage() {
             description="Regular meetings are organised for the students who share the same technical interests, so they can get connected with each other."
             variant="meetups"
           />
-
         </div>
       </section>
     </section>

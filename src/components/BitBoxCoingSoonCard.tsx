@@ -5,7 +5,7 @@ import { Rocket, Clock } from "lucide-react"
 
 export function BitBoxComingSoon() {
   return (
-    <div className="flex w-95 items-center gap-3 rounded-full border border-zinc-800 bg-black-900/80 px-5 py-5 shadow-md backdrop-blur">
+    <div className="flex w-95 items-center gap-3 rounded-full border border-zinc-800 bg-yellow-800/20 px-5 py-5 shadow-md backdrop-blur">
       
       {/* Icon */}
       <div className="flex h-8 w-8 items-center justify-center rounded-full bg-orange-500/10">
