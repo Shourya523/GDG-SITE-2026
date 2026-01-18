@@ -119,7 +119,7 @@ export default function HomePage() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
             transition={{ type: "spring", stiffness: 260, damping: 25 }}
-            className="fixed bottom-6 left-1/2 -translate-x-1/2 md:left-auto md:right-10 md:translate-x-0 z-50 cursor-pointer"
+            className="fixed bottom-6 left-1/2 -translate-x-1/2 md:left-auto md:right-10 md:translate-x-0 z-50 cursor-pointer scale-85"
             onClick={() => router.push("/bitbox")}
           >
             <BitBoxComingSoon />
