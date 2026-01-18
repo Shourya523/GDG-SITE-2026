@@ -23,7 +23,16 @@ export default function ContactUs() {
         setStatus({ loading: true, message: "", type: "" });
 
         try {
-            const response = await axios.post("/api/contactUs", formData);
+            const response = await axios.post(
+                "/api/contactUs",
+                formData,
+                {
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                }
+            );
+
 
             if (response.status >= 200 && response.status < 300) {
                 setStatus({ loading: false, message: "Message sent successfully!", type: "success" });
