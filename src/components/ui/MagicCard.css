@@ -1,0 +1,46 @@
+.magic-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.magic-card-border {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.magic-card:hover .magic-card-border {
+  opacity: 1;
+}
+
+.magic-card-bg {
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: #0a0a0a;
+}
+
+.magic-card-glow {
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.magic-card:hover .magic-card-glow {
+  opacity: 1;
+}
+
+.magic-card-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  color: white;
+}

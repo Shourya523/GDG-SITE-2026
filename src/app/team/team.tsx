@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import "./team.css";
-import { Instagram, Linkedin, Github, MessageSquare } from "lucide-react";
+import { Instagram, Linkedin, Github } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -252,11 +252,12 @@ export default function Team() {
           }}
           className="w-full team-carousel"
         >
-          <CarouselContent className="-ml-2 py-10">
+
+          <CarouselContent className="-ml-4 py-10">
             {filteredMembers.map((member) => (
               <CarouselItem
                 key={member.id}
-                className="pl-1 basis-1/5 md:basis-1/9 lg:basis-1/12 flex justify-center items-center"
+                className="pl-4 basis-1/4 md:basis-1/5 lg:basis-1/6 flex justify-center items-center"
               >
                 <div
                   className={`carousel-avatar-btn ${selectedMember?.id === member.id ? "selected" : ""
@@ -276,7 +277,7 @@ export default function Team() {
           </CarouselContent>
 
           <CarouselPrevious className="custom-carousel-btn flex -left-12" />
-          <CarouselNext className="custom-carousel-btn flex -right-12" />
+          <CarouselNext className="custom-carousel-btn flex -right-30" />
         </Carousel>
       </div>
     </div>
