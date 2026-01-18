@@ -39,7 +39,7 @@ export default function ContactUs() {
     };
 
     return (
-        <div className="min-h-screen bg-black flex items-center justify-center p-6 selection:bg-red-500/30">
+        <div className="min-h-screen bg-black flex items-center justify-center p-6 selection:bg-red-500/30 mt-7">
             <div className="fixed inset-0 bg-[radial-gradient(circle_at_center,rgba(20,20,20,1)_0%,rgba(0,0,0,1)_100%)] pointer-events-none" />
 
             <motion.div

@@ -50,7 +50,7 @@ const SponsorCard = ({ item, className = "", borderColor = "border-white/10", gl
 }) => {
   return (
     <a
-      href={item.link}
+      // href={item.link}
       target="_blank"
       rel="noopener noreferrer"
       className={`group relative block h-full w-full ${className}`}
@@ -141,7 +141,7 @@ export default function Sponsors() {
           className="text-center mb-12"
         >
           <h3 className="text-4xl md:text-6xl font-bold text-white tracking-tighter">
-            Powered <span className="text-white/50">By</span>
+            Powered <AuroraText>By</AuroraText>
           </h3>
           <div className="h-1 w-20 bg-white/20 mx-auto mt-4 rounded-full" />
         </motion.div>
@@ -169,7 +169,7 @@ export default function Sponsors() {
           className="text-center mb-12"
         >
           <h3 className="text-4xl md:text-6xl font-bold text-white tracking-tighter">
-            Co <span className="text-white/50">Sponsors</span>
+            Co <AuroraText>Sponsors</AuroraText>
           </h3>
           <div className="h-1 w-20 bg-white/20 mx-auto mt-4 rounded-full" />
         </motion.div>
@@ -198,8 +198,8 @@ export default function Sponsors() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h3 className="text-4xl md:text-6xl font-bold text-white/30 tracking-tighter">
-            Past Sponsors
+          <h3 className="text-4xl md:text-6xl font-bold text-white tracking-tighter">
+            Past <AuroraText>Sponsors</AuroraText>
           </h3>
           <div className="h-1 w-20 bg-white/10 mx-auto mt-4 rounded-full" />
         </motion.div>
